@@ -1,0 +1,58 @@
+/* Навігація по сторінках сайта */
+/* навігація  в header  flex container*/
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 318px;
+}
+
+/* елементи навігації */
+.nav__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+/* padding link збільшує зону клікабельності */
+.nav__link {
+    position: relative;
+    color: var(--title-ccolor--);
+    padding: 32px 0px;
+    transition: var(--color--) var(--duration--) var(--cubic--);
+    &:focus,
+    &:hover,
+    &--current{
+        color: var(--accent-color--);
+       }
+}
+
+// .nav__link:focus,
+// .nav__link:hover {
+//     color: var(--accent-color--);
+// }
+
+/* підсвітка посилання активної сторінки */
+// .nav__link--current {
+//     color: var(--accent-color--);
+// }
+
+.nav__link--current::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    display: block;
+    /*даємо геометрію бо псевдокласи рядкові ел-ти*/
+    width: 110%;
+    /*риска шириною батька nav__link*/
+    height: 4px;
+    /*висота риски*/
+    border-radius: 4px;
+    /*заокруглена*/
+    background-color: var(--accent-color--);
+    transition: var(--bgcolor--) var(--duration--) var(--cubic--),
+                transform 300ms linear;
+
+    }
+
+.nav__link--current:hover:after {
+    transform: rotate(180deg);
+}

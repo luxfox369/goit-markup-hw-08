@@ -1,0 +1,51 @@
+ 
+    @mixin generateProjectImg($listProjects){
+       @each $projectItem in $project
+         {
+         .project__img__#{$projectItem} {
+             background-image: url("../images/project#{$projectItem}.jpg");
+        }
+    }
+   }
+//якщо б ц не були inline svg,а backgroun-image тоді можна б було через @mixin generateProjectImg($listProjects)
+// $project: 1, 2, 3, 4, 5, 6, 7, 8, 9; //це в basic/_variables.scss
+//@include generateProjectImg($project) під"єднати там де потрібно згенерувати /
+
+//@include centeredFlex() або @include centeredFlex(inline-flex)
+//центрування flex контейнера
+@mixin centeredFlex ($type:flex){
+    display:$type;
+    justify-content: center;
+    align-items:center;
+}
+
+/*центрує блок всередині батька /можна зминити кут будови, що впливає на ефект  scale() */
+@mixin centeredAbsolute ($x__abs:left,$y__abs:top) {
+   position: absolute;
+   $x__number:-50%;
+   $y__number:-50%;
+
+@if $x__abs == left {
+        left: 50%;
+        }
+@else   {                   
+        right: 50%;       
+        $x__number: 50%;  
+        }
+@if $y__abs == top {
+        top:50%;
+        }
+@else  {               
+     bottom: 50%;
+     $y__number:50%;    
+      }
+transform: translate($x__number,$y__number) scale(1); /* 100%*/ ;
+}
+
+@each $color in $colors {            /*цикл вибору/ кожен елемент списку знаситься в змінну $color*/
+        $idx: index($colors, $color); /*в $idx записується поряд номер кольора в списку */
+
+        .item:nth-child(#{$idx}) { /*кожному елементу з класом item з поряд номером в html відповідно до списку кольорів($idx(екранована))  */
+                background-color: #{$color}; /*змінюється колір на текучий в циклі*/
+        }
+}

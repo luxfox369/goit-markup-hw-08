@@ -1,0 +1,102 @@
+/* projects */
+/* h2 - title-econd  */
+.project {
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+/* проекти в рядок з переносом по 4 з gap 30px */
+/* кожному 3му забрати правий маржин */
+/* .project-item:nth-child(3n){
+ margin-right:0px;}*/
+/* останнім 3м забрати нижній маржин */
+/*.project-item:nth-last-child(-n+3){
+ margin-bottom:0px;
+} */
+   &__item {
+    background: #ffffff;
+    /* flex-basis: calc((100%-30px * 2) / 3); */
+    margin-bottom: 30px;
+    transition: var(--filter--) var(--duration--) var(--cubic--);
+    &:hover,
+    &:focus {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+     }
+  }
+
+   &__thumb {
+      position: relative;
+      overflow: hidden;
+    }
+
+   &__img {
+    width: 370px;
+    height: 294px;
+    /* background-image: url("../images/project1.jpg"); */
+    }
+
+   &__overlay {
+   //  position: absolute;
+   //  top: 0;
+   //  left: 0;
+   //  width: 100%;
+    /* на весь img*/
+    @extend %overlay100;
+    height: 102%; /*ховаємо вниз*/
+    @include centeredFlex();
+    background-color: var(--accent-color--);
+    transform: perspective(300px) translateY(101%) rotateY(5deg);
+    transition: var(--transform--) 2000ms var(--cubic--),
+                var(--transform--) 2000ms var(--cubic--);
+        
+   .project__item:hover & {
+       transform: perspective(300px) translatey(0) rotateY(360deg);
+    }
+   }
+   &__about {
+    font-size: 18px;
+    line-height: calc(28 / 18);
+    letter-spacing: 0.03em;
+    color: var(--prime-bg-color--);
+    padding: 63px 24px;
+    margin-top: 10px;
+    }
+          
+/* згрупування під карткою проекту */
+   &__label {
+    width: 370px;
+    padding: 19px 24px 19px 24px;
+    border: 1px solid #eeeeee;
+    border-top: none;
+   }
+
+/*h2 title-project */
+   &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(36 / 18);
+    letter-spacing: 0.06em;
+    color: var(--title-ccolor--);
+    margin-bottom: 4px;
+   }
+
+   &__type {
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.03em;
+    color: var(--text-color--);
+   }
+   
+   
+}
+ 
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+/* підкладка для модального вікна */
+
+.backdrop {
+    @extend %fixed00-100;
+    overflow-y: scroll; /*щоб не скролився контент під ним*/
+    transition: opacity var(--duration--) var(--cubic--),
+        visibility var(--duration--) var(--cubic--);
+        &.is-hidden {
+            @extend %is-hidden;
+            & .modal {
+                transform: scale(0.01);
+            }
+        }
+}
+
+.modal {
+    width: 528px;
+    height: 581px;
+    
+    @include centeredAbsolute($x__abs:right);
+       background-color: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: var(--transform--) 1s var(--cubic--),
+                var(--transform--) 1s var(--cubic--);
+}
+/* кнопка закриття в модальному вікні */
+.button-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #fff;
+    /*фон кнопки*/
+    color: var(--icon-color--);
+    display: block;
+    padding: 0;
+    //hover
+      &:focus,
+      &:hover .icon-close {
+            stroke: var(--accent-color--);
+        }
+}
+.icon-close {
+    fill: #fff;
+    /* хрестик,коло stroke :/*var(--button-bg-color--);  */
+}
+

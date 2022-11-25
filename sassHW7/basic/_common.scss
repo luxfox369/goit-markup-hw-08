@@ -1,0 +1,86 @@
+/* глобальні налаштування */
+
+body {
+    font-family: var(--prime-font-family--);
+    /*'Roboto', sans-serif*/
+    color: var(--text-color--);
+    background-color: var(--prime-bg-color--);
+    &.modal-open{
+      overflow: hidden;
+    }
+}
+/*загальне налаштування для кнопок */
+.btn {
+    font-family: var(--prime-font-family--);
+    border: none;
+    cursor: pointer;
+}
+
+/* активна кнопка */
+/* .active {
+  color: var(--prime-bg-color--);
+  background: var(--accent-color--);
+} */
+
+/* скриває елемент */
+.visually-hidden {
+    position: fixed;
+    transform: scale(0);
+}
+
+/* більший контейнер */
+.big-container {
+    max-width: $width-big-container;
+    margin: 0 auto;
+    /*  центрує */
+}
+
+/* контейнер  */
+.container {
+    width:$width-container;
+    margin: 0 auto;
+    /*вертик забирає горизонт центрує блоковий*/
+    padding: 0 $padding-container;
+}
+
+/* спільна властивість секцій */
+.section {
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* h1 */
+.title-first {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: calc(60 / 44);
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--title-color--);
+}
+
+/* h2 */
+.title-second {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(42 / 36);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-ccolor--);
+}
+
+/* h3 */
+.title-third {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-align: center;
+    /* text-transform: uppercase; */
+    color: var(--title-ccolor--);
+}

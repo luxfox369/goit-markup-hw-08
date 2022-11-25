@@ -1,0 +1,49 @@
+//Utils styles
+@import './utils/variables';
+@import './utils/animations';
+@import './utils/mixins';
+@import './utils/placeholders';
+
+//basic styles
+@import './basic/reset';
+@import './basic/common';
+
+//components styles
+@import './components/logo';
+@import './components/social';
+
+//header styles
+@import './components/page-header/common';
+@import './components/page-header/menu-mobile';
+@import './components/page-header/navigation';
+@import './components/page-header/contacts';
+
+//hero styles
+@import './components/hero/hero-main';
+@import './components/hero/backdrop_modal';
+@import './components/hero/hero-form';
+
+//features styles
+@import './components/features';
+
+//deals styles
+@import './components/deals';
+
+//team styles
+@import './components/team';
+
+//clients styles
+@import './components/clients';
+
+//footer styles
+@import './components/page-footer/common';
+@import './components/page-footer/address';
+@import './components/page-footer/footer-social';
+@import './components/page-footer/submit-form';
+
+//projects styles
+@import './components/filter-projects';
+@import './components/portfolio-projects';
+
+
+

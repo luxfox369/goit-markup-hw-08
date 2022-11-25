@@ -1,0 +1,28 @@
+/* logo */
+.logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    letter-spacing: 3%;
+}
+
+.logo--transform {
+    display: flex;
+    transition: transform 500ms linear;
+}
+
+.logo__web--blue {
+    color: var(--accent-color--);
+}
+
+.logo__studio--mr93black {
+    display: inline-block;
+    margin-right: 93px;
+    color: #000;
+}
+
+.logo--transform:hover {
+    transform: scale(2);
+}

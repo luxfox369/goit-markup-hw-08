@@ -1,0 +1,54 @@
+/* стилі index */
+/* секція hero */
+/* hero  title-first */
+.hero{
+  &-section {
+    color: var(--prime-bg-color--);
+    background: var(--second-bg-color--);
+    background-image: linear-gradient(to bottom right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url("../images/hero.jpg");
+
+    background-repeat: no-repeat;    
+    padding-top: 200px;
+    padding-bottom: 200px;
+    
+  }
+
+/* анімація елемент падає зверху букви розїжджаються і все стає на місце */
+
+
+  &__title.title-first {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 696px;
+    animation: slide-to-bottom 5s linear 200ms both;
+   }
+
+  &__button {
+    padding: 10px 32px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.06em;
+    background-color: var(--accent-color--);
+    color: var(--prime-bg-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+    /*вертик забирає горизонтально центрує*/
+    transition: var(--bgcolor--) var(--duration--) var(--cubic--);
+    opacity: 0;
+    animation: butjump 300ms ease-out 1s 14 alternate-reverse forwards;
+    // на кнопку hover/focus
+        &:focus,
+        &:hover {
+                background-color: #188ce8;
+            }
+
+   }
+
+}

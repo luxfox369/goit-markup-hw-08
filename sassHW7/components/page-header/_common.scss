@@ -1,0 +1,16 @@
+/* header section*/
+
+.header-section {
+    /* спільний шрифт */
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid#ECECEC;
+}
+
+/* весь header у flex container */
+.header__container {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,42 @@
+/* Контакт ліст у flex щоб поставити у рядок */
+.contact__list {
+    display: flex;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+/* вигляд мейл і телефон */
+.contact__link {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @include centeredFlex();
+    color: var(--text-color--);
+    padding: 32px 0px;
+    gap: 10px;
+    transition: var(--fill--) var(--duration--) var(--cubic--),
+        var(--color--) var(--duration--) var(--cubic--);
+
+        &:focus,
+        &:hover{
+        color: var(--accent-color--);
+        }
+}
+
+
+/* колір  від  link-батька */
+.contact__icon {
+    display: block;
+    fill: currentColor;
+    transition: var(--fill--) var(--duration--) var(--cubic--),
+        var(--color--) var(--duration--) var(--cubic--);
+    .contact__link:focus,
+    .contact__link:hover & {
+                fill: var(--accent-color--);
+                color: var(--accent-color--);
+            }
+
+}
+
+
+

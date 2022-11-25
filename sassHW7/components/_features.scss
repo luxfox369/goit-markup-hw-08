@@ -1,0 +1,60 @@
+/* секція Особливості */
+/* feature-section */
+/* h2 схований */
+/* h3 - .tille-third */
+/* feature-section обгорнута в  container 1200px */
+/* список feature ставимо в рядок */
+.feature__list {
+    display: flex;
+    justify-content: space-between;
+    & .title-third {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+}
+
+/* заголовки в li feature-list */
+// .feature__list .title-third {
+//     text-align: left;
+//     margin-bottom: 10px;
+// }
+
+/* p в li */
+.feature__text {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: var(--text-color--);
+}
+
+/* колекція контайнера flex-list * /
+/* всі елементи однакової величини на main axis */
+.feature__item {
+    // flex-basis: 270px;
+    flex-basis:calc((#{$flex-basis}-30px * ($number-features-1)) / $number-features);
+    &:not(:last-child) {
+            margin-right: 30px;
+        }
+}
+
+/* відстань між всіма ел-ми колекції крім останнього */
+// .feature__item:not(:last-child) {
+//     margin-right: 30px;
+// }
+.feature__icon {
+    display: block;
+    &--block {
+            background: var(--button-bg-color--);
+            border-radius: 4px;
+            padding: 25px 100px;
+            margin-bottom: 30px;
+        }
+}
+// .feature__icon--block {
+//     background: var(--button-bg-color--);
+//     border-radius: 4px;
+//     padding: 25px 100px;
+//     margin-bottom: 30px;
+// }
+

@@ -1,0 +1,57 @@
+/* секція Особливості */
+/* feature-section */
+/* h2 схований */
+/* h3 - .tille-third */
+/* feature-section обгорнута в  container 1200px */
+/* список feature ставимо в рядок */
+.feature__list {
+    &.title-third {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width:$min-tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+       
+    @media screen and  (min-width:$min-desktop) {
+       flex-wrap: nowrap;
+   }
+}
+/* p в li */
+.feature__text {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: var(--text-color--);
+}
+
+.feature__item {
+    @media screen and (min-width:$min-tablet) {
+         flex-basis:calc($basis-tablet - 2*$padding-container / 2);
+         &:nth-child(2n+1) {
+          margin-right: 2*$padding-container;
+         }
+        }     
+    @media screen and (min-width:$min-desktop) {
+     flex-basis:calc($basis-desktop - 2*$padding-container*3 / 4);
+        margin-right:0;
+         &:not(:last-child) {
+          margin-right: 2*$padding-container;
+          }
+     }
+}
+
+.feature__icon {
+    display: block;
+    &--block {
+            background: var(--button-bg-color--);
+            border-radius: 4px;
+            padding: 25px 100px;
+            margin-bottom: 30px;
+        }
+}
+
+
