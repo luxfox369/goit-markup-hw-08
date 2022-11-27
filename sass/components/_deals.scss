@@ -1,13 +1,7 @@
 /* секція deal Чим ми займаємось */
 /*h2 - .title-second*/
 .deal{
-   &-section {
-    padding-top: 0px;
-    @media screen and #{$max-desktop}{
-       display:none;  
-    }
-   }
-
+   
    &__title.title-second {
     margin-bottom: 50px;
    }
@@ -16,30 +10,30 @@
    &__list {
     display: flex;
     justify-content: space-between;
+    gap:30px;
    }
 
-/* Якщо змінити к-ть картинок поки не знаю що написати замість 3 */
-/* img  діти li які є ел-ми flex container тому унаслідують наступне  */
+// ширина ел-та
   &__item {
-    @media screen and #{$min-desktop} {
-     flex-basis: calc((#{$basis-desktop} - $padding-container*2 * ($number-deals-1)) / $number-deals);
-    }
+    // flex-basis: calc( ($basis-desktop - 2 * $padding-container  * ($number-deals - 1)) / $number-deals);
     &--wrapper{
     position: relative;
     }
    }
+   &__img {
+     width: 370px;
+     max-height: 294px;
+   }
+   &-section {
+       padding-top: 0px;
+       // до desktop не показувати
+       @media screen and (max-width:$min-desktop) {
+           display: none;
+       }
+   }
 }
 
-/* обгортка для фоток чим ми займаємось */
-// .deal__item--wrapper {
-//     /*відносно нього overlay-box з текстом на темному фоні*/
-//     position: relative;
-// }
 
-.deal__img {
-    width: 370px;
-    max-height: 294px;
-}
 
 /* блок з текстом */
 .overlay{

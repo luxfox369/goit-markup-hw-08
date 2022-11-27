@@ -29,27 +29,22 @@
             --duration--: 250ms;
             --cubic--: cubic-bezier(0.4, 0, 0.2, 1);
 
-   
-}
+ }
 // width/padding container
-$big-container:1600px;
+$big-container: 1600px;
+
 $min-mobile: 480px;
 $min-tablet: 768px;
-$min-desktop:1200px;
-$max-mobile: 479.98px;
-$maxtablet:  767.98px;
-$max-desktop:1199.98px;
+$min-desktop: 1200px;
+
+$max-mobile: 767.97px;
+$max-tablet: 1199.97px;
 
 $padding-container: 15px;
 //змінна для обчислення flex-basis team-card__item 
-$basis-tablet:  calc($min-tablet - $padding-container*2);
+$basis-tablet: calc($min-tablet - $padding-container*2);
 $basis-desktop: calc($min-desktop - $padding-container*2);
-//кількість features
-$number-features:4;
-//кількість deal
-$number-deals:3;
-//кількість працівників
-$number-team-member:4;
+
 //
 // SASS loop for background color generation.
 //список кольорів

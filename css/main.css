@@ -1252,3 +1252,84 @@ body.modal-open {
   letter-spacing: 0.03em;
   color: var(--text-color--);
 }/*# sourceMappingURL=main.css.map */
+  /* згрупування під карткою проекту */
+  /*h2 title-project */
+}
+.project__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+.project__item {
+  background: #ffffff;
+  /* flex-basis: calc((100%-30px * 2) / 3); */
+  margin-bottom: 30px;
+  -webkit-transition: var(--filter--) var(--duration--) var(--cubic--);
+  transition: var(--filter--) var(--duration--) var(--cubic--);
+}
+.project__item:hover, .project__item:focus {
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.project__thumb {
+  position: relative;
+  overflow: hidden;
+}
+.project__img {
+  width: 370px;
+  height: 294px;
+  /* background-image: url("../images/project1.jpg"); */
+}
+.project__overlay {
+  /* на весь img*/
+  height: 102%; /*ховаємо вниз*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--accent-color--);
+  -webkit-transform: perspective(300px) translateY(101%) rotateY(5deg);
+          transform: perspective(300px) translateY(101%) rotateY(5deg);
+  -webkit-transition: var(--transform--) 2000ms var(--cubic--), var(--transform--) 2000ms var(--cubic--);
+  transition: var(--transform--) 2000ms var(--cubic--), var(--transform--) 2000ms var(--cubic--);
+}
+.project__item:hover .project__overlay {
+  -webkit-transform: perspective(300px) translatey(0) rotateY(360deg);
+          transform: perspective(300px) translatey(0) rotateY(360deg);
+}
+.project__about {
+  font-size: 18px;
+  line-height: 1.5555555556;
+  letter-spacing: 0.03em;
+  color: var(--prime-bg-color--);
+  padding: 63px 24px;
+  margin-top: 10px;
+}
+.project__label {
+  width: 370px;
+  padding: 19px 24px 19px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+.project__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-ccolor--);
+  margin-bottom: 4px;
+}
+.project__type {
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+  color: var(--text-color--);
+}/*# sourceMappingURL=main.css.map */

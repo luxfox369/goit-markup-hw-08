@@ -1,6 +1,6 @@
 /* глобальні налаштування */
 body {
-    max-width: $big-container;
+    
     font-family: var(--prime-font-family--);
     /*'Roboto', sans-serif*/
     color: var(--text-color--);
@@ -23,10 +23,10 @@ body {
     margin: 0 auto;
     padding: 0 $padding-container;
    
-    @media screen and (min-width:$min-mobile) {
+  @media screen and (min-width:$min-mobile) {
         width:$min-mobile;
     }
-    @media screen and (min-width:$min-tablet) {
+  @media screen and (min-width:$min-tablet) {
         width:$min-tablet;
     }
     @media screen and (min-width:$min-desktop) {
@@ -41,6 +41,11 @@ body {
        padding-bottom: 94px;
        padding-top: 94px;
    }
+}
+/* скриває елемент */
+.visually-hidden {
+    position: fixed;
+    transform: scale(0);
 }
 
 .uppercase {

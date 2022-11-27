@@ -24,16 +24,6 @@
        }
 }
 
-// .nav__link:focus,
-// .nav__link:hover {
-//     color: var(--accent-color--);
-// }
-
-/* підсвітка посилання активної сторінки */
-// .nav__link--current {
-//     color: var(--accent-color--);
-// }
-
 .nav__link--current::after {
     position: absolute;
     bottom: 0;
