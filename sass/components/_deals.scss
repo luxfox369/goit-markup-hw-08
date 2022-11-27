@@ -1,7 +1,9 @@
 /* секція deal Чим ми займаємось */
 /*h2 - .title-second*/
 .deal{
-   
+    @media screen and (max-width:$min-desktop) {
+            display: none;
+        }
    &__title.title-second {
     margin-bottom: 50px;
    }
@@ -27,9 +29,7 @@
    &-section {
        padding-top: 0px;
        // до desktop не показувати
-       @media screen and (max-width:$min-desktop) {
-           display: none;
-       }
+      
    }
 }
 
