@@ -9,8 +9,9 @@
 
 .feature__icon {
     display: block;
+    text-align:center;
      
-    
+
     &--block {
         background: var(--button-bg-color--);
         border-radius: 4px;
