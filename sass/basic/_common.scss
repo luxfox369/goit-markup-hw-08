@@ -1,6 +1,6 @@
 /* глобальні налаштування */
 body {
-    
+    width:100vw;
     font-family: var(--prime-font-family--);
     /*'Roboto', sans-serif*/
     color: var(--text-color--);
@@ -22,7 +22,7 @@ body {
 .container {
     margin: 0 auto;
     padding: 0 $padding-container;
-   
+    // width:100vw;
   @media screen and (min-width:$min-mobile) {
         width:$min-mobile;
     }

@@ -6,34 +6,37 @@
 
 .team__title.title-second {
     margin-bottom: 30px;
-    @media screen and (max-width:$min-desktop){
+
+    @media screen and (max-width:$max-tablet){
         font-size:28px;
         line-height:calc(32 / 28);
     }
     @media screen and (min-width:$min-desktop){
-       margin-bottom: 50px;
+         margin-bottom: 50px;
 }
 }
-
 .team-card {
     &__list {
         @media screen and (min-width:$min-tablet) {
             display: flex;
-            flex-wpap:wrap;
-            gap:2*$padding-container;
-
+            flex-wrap:wrap;
             justify-content: center;
+            gap: 2*$padding-container;
         }    
          @media screen and (min-width:$min-desktop) {
-                 flex-wrap:nowrap;   
+             flex-wrap: nowrap; 
         }
     }
     &__item {
+            
             background-color: var(--prime-bg-color--);
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
                 0px 2px 1px rgba(0, 0, 0, 0.2);
             border-radius: 0px 0px 4px 4px;
-            
+
+            @media screen and (max-width:$max-mobile) {
+              margin-bottom: 30px;
+            }
             @media screen and (min-width:$min-tablet) {
               flex-basis: calc(($basis - 2 * $padding-container ) / 2);
                 // margin-right: 30px;
@@ -44,10 +47,7 @@
             
             transition: var(--transform--) 1s var(--cubic--);
     
-            // &:last-child {
-            //     margin-right: 0px;
-            // }
-    
+                
             &:hover {
                 @media screen and (min-width:$min-desktop) {
                 transform: scale(1.5);
@@ -56,7 +56,7 @@
         }
     &__image {
         display: block;
-        width: 450px;
+        width:450px;
         margin-bottom: 30px;
         @media screen and (min-width:$min-tablet) {
           width: 354px;

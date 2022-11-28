@@ -182,6 +182,7 @@ a {
 
 /* глобальні налаштування */
 body {
+  width: 100vw;
   font-family: var(--prime-font-family--);
   /*'Roboto', sans-serif*/
   color: var(--text-color--);
@@ -321,14 +322,20 @@ body.modal-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  margin: 16px 32px 30px;
+  margin-top: 16px;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .social__list {
+    padding-bottom: 30px;
+  }
 }
 .social__button {
   display: -webkit-box;
@@ -871,7 +878,7 @@ body.modal-open {
     margin-bottom: 30px;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .feature__item {
     -ms-flex-preferred-size: calc((100% - 30px - 30px) / 2);
         flex-basis: calc((100% - 30px - 30px) / 2);
@@ -888,10 +895,16 @@ body.modal-open {
   display: block;
 }
 .feature__icon--block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: var(--button-bg-color--);
   border-radius: 4px;
   margin-bottom: 30px;
-  padding: 15px auto;
+  padding: 15px 0px;
 }
 
 .feature__text {
@@ -965,7 +978,7 @@ body.modal-open {
 .team__title.title-second {
   margin-bottom: 30px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199.97px) {
   .team__title.title-second {
     font-size: 28px;
     line-height: 1.1428571429;
@@ -982,11 +995,12 @@ body.modal-open {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-wpap: wrap;
-    gap: 30px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    gap: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1002,6 +1016,11 @@ body.modal-open {
   border-radius: 0px 0px 4px 4px;
   -webkit-transition: var(--transform--) 1s var(--cubic--);
   transition: var(--transform--) 1s var(--cubic--);
+}
+@media screen and (max-width: 767.97px) {
+  .team-card__item {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .team-card__item {
