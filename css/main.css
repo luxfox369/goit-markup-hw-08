@@ -837,24 +837,6 @@ body.modal-open {
 /* feature-section обгорнута в  container 1200px */
 /* список feature ставимо в рядок */
 /* p в li */
-.feature__icon {
-  display: block;
-  text-align: center;
-}
-.feature__icon--block {
-  background: var(--button-bg-color--);
-  border-radius: 4px;
-  margin-bottom: 30px;
-  padding: 15px auto;
-}
-
-.feature__text {
-  font-size: 14px;
-  line-height: 1.7142857143;
-  letter-spacing: 0.03em;
-  color: var(--text-color--);
-}
-
 @media screen and (min-width: 768px) {
   .feature__list {
     display: -webkit-box;
@@ -889,14 +871,46 @@ body.modal-open {
     margin-bottom: 30px;
   }
 }
+@media screen and (max-width: 1200px) {
+  .feature__item {
+    -ms-flex-preferred-size: calc((100% - 30px - 30px) / 2);
+        flex-basis: calc((100% - 30px - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature__item {
+    -ms-flex-preferred-size: calc((100% - 30px - 90px) / 4);
+        flex-basis: calc((100% - 30px - 90px) / 4);
+  }
+}
+
+.feature__icon {
+  display: block;
+}
+.feature__icon--block {
+  background: var(--button-bg-color--);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding: 15px auto;
+}
+
+.feature__text {
+  font-size: 14px;
+  line-height: 1.7142857143;
+  letter-spacing: 0.03em;
+  color: var(--text-color--);
+}
 
 /* секція deal Чим ми займаємось */
 /*h2 - .title-second*/
 .deal {
   /* картинки в рядок */
 }
+.deal-section {
+  padding-top: 0px;
+}
 @media screen and (max-width: 1200px) {
-  .deal {
+  .deal-section {
     display: none;
   }
 }
@@ -918,9 +932,6 @@ body.modal-open {
 .deal__img {
   width: 370px;
   max-height: 294px;
-}
-.deal-section {
-  padding-top: 0px;
 }
 
 /* блок з текстом */
@@ -994,14 +1005,14 @@ body.modal-open {
 }
 @media screen and (min-width: 768px) {
   .team-card__item {
-    -ms-flex-preferred-size: 354px;
-        flex-basis: 354px;
+    -ms-flex-preferred-size: calc((100% - 30px - 30px) / 2);
+        flex-basis: calc((100% - 30px - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .team-card__item {
-    -ms-flex-preferred-size: 270px;
-        flex-basis: 270px;
+    -ms-flex-preferred-size: calc((100% - 30px - 90px) / 4);
+        flex-basis: calc((100% - 30px - 90px) / 4);
   }
 }
 @media screen and (min-width: 1200px) {

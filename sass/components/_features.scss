@@ -6,34 +6,6 @@
 /* список feature ставимо в рядок */
 /* p в li */
 
-
-.feature__icon {
-    display: block;
-    text-align:center;
-     
-
-    &--block {
-        background: var(--button-bg-color--);
-        border-radius: 4px;
-        margin-bottom: 30px;
-        padding: 15px auto;
-
-        // @media screen and (min-width:$min-tablet) {
-        //         padding: 25px 142px;
-        //    }
-        // @media screen and (min-width:$min-desktop){
-        //     padding: 25px 100px;
-        // }
-
-    }
-}
-.feature__text {
-    font-size: 14px;
-    line-height: calc(24 / 14);
-    letter-spacing: 0.03em;
-    color: var(--text-color--);
-}
-
 .feature__list {
 
     @media screen and (min-width:$min-tablet) {
@@ -59,18 +31,34 @@
        margin-bottom:30px;
     }
 
-    // @media screen and (min-width:$min-tablet) {
-    //      flex-basis:calc($basis-tablet - 2*$padding-container*1 / 2);
-    //      &:nth-child(2n+1) {
-    //       margin-right: 2*$padding-container;
-    //      }
-    // }     
-    // @media screen and (min-width:$min-desktop) {
-    //      flex-basis:calc($basis-desktop - 2*$padding-container*3 / 4);
-    //      &:not(:last-child) {
-    //       margin-right: 2*$padding-container;
-    //       }
-    // }
+      @media screen and (max-width:$min-desktop) {
+         flex-basis:calc(($basis - 2*$padding-container*1 )/ 2);
+        //  &:nth-child(2n+1) {
+        //   margin-right: 2*$padding-container;
+        //  }
+     }     
+      @media screen and (min-width:$min-desktop) {
+         flex-basis:calc(($basis - 2*$padding-container*3) / 4);
+        //  &:not(:last-child) {
+        //   margin-right: 2*$padding-container;
+        //   }
+    }
+}
+.feature__icon {
+    display: block;
+
+    &--block {
+        background: var(--button-bg-color--);
+        border-radius: 4px;
+        margin-bottom: 30px;
+        padding: 15px auto;
+    }
+}
+.feature__text {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: var(--text-color--);
 }
 
 
