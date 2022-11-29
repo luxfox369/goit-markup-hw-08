@@ -38,11 +38,11 @@
               margin-bottom: 30px;
             }
             @media screen and (min-width:$min-tablet) {
-              flex-basis: calc(($basis - 2 * $padding-container ) / 2);
+              flex-basis: calc((100% - 2 * $padding-container ) / 2);
                 // margin-right: 30px;
             }
             @media  screen and (min-width:$min-desktop){ 
-              flex-basis: calc(($basis - 2 * $padding-container * 3) / 4);
+              flex-basis: calc((100% - 2 * $padding-container * 3) / 4);
             }
             
             transition: var(--transform--) 1s var(--cubic--);

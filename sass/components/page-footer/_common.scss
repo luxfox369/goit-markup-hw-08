@@ -1,28 +1,47 @@
 /* СЕКЦІЯ footer*/
-
+.footer__mini {
+    @media screen and (min-width:$min-tablet) and (max-width:$max-tablet) {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        margin-bottom:60px;
+     }
+     @media screen and (min-width:$min-desktop) {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+    }
+}
 .footer-section {
+    @media screen and (min-width:$min-desktop){
     display: flex;
-        /* gap: 70px; */
     align-items: baseline;
+    }
     color: var(--prime-bg-color--);
     background: var(--second-bg-color--);
     padding-top: 60px;
     padding-bottom: 60px;
     /* border-top: 0px solid transparent; */
 }
-
-// .footer-combine {
-//     display: flex;
-//     /* gap: 70px; */
-//     align-items: baseline;
-//     color: var(--prime-bg-color--);
-// }
+.footer-combine{
+    @media screen and (min-width:$min-desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    }
+}
 
 .logo{
    &--mb20 {
-    display: inline-block;
     margin-bottom: 20px;
-   }
+    @media screen and (max-width:$max-tablet){
+    display: block;
+    text-align: center;
+    font-size:24px;
+    letter-spacing:calc(28 /24);;
+   } 
+    display: inline-block;
+   } 
 
    &__studio--mr0_white {
     display: inline-block;

@@ -33,13 +33,13 @@
     }
 
       @media screen and (min-width:$min-tablet) {
-         flex-basis:calc(($basis - 2*$padding-container*1 )/ 2);
+         flex-basis:calc((100% - 2*$padding-container*1 )/ 2);
         //  &:nth-child(2n+1) {
         //   margin-right: 2*$padding-container;
         //  }
      }     
       @media screen and (min-width:$min-desktop) {
-         flex-basis:calc(($basis - 2*$padding-container*3) / 4);
+         flex-basis:calc((100% - 2*$padding-container*3) / 4);
         //  &:not(:last-child) {
         //   margin-right: 2*$padding-container;
         //   }
