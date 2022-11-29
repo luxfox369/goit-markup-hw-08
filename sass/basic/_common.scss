@@ -16,6 +16,7 @@ body {
     cursor: pointer;
 }
 .big-container{
+    margin: 0 auto;
     max-width: $big-container;
 }
 /* контейнер  */
@@ -29,7 +30,7 @@ body {
   @media screen and (min-width:$min-tablet) {
         width:$min-tablet;
     }
-    @media screen and (min-width:$min-desktop) {
+  @media screen and (min-width:$min-desktop) {
         width:$min-desktop;
     }
 }

@@ -200,6 +200,7 @@ body.modal-open {
 }
 
 .big-container {
+  margin: 0 auto;
   max-width: 1600px;
 }
 
@@ -981,7 +982,7 @@ body.modal-open {
 @media screen and (max-width: 1199.97px) {
   .team__title.title-second {
     font-size: 28px;
-    line-height: 1.1428571429;
+    line-height: 1.1785714286;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1077,35 +1078,64 @@ body.modal-open {
 .client-section {
   padding-top: 94px;
 }
-
 .client__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1199.97px) {
+  .client__title {
+    font-size: 28px;
+    line-height: 1.1785714286;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client__title {
+    margin-bottom: 50px;
+  }
 }
 .client__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .client__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+@media screen and (max-width: 767.97px) {
+  .client__item {
+    -ms-flex-preferred-size: calc((100% - 30px - 30px) / 2);
+        flex-basis: calc((100% - 30px - 30px) / 2);
+  }
+}
+@media screen and (min-width: 768px) {
+  .client__item {
+    -ms-flex-preferred-size: calc((100% - 30px - 60px) / 3);
+        flex-basis: calc((100% - 30px - 60px) / 3);
+  }
 }
 .client__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 170px;
-  height: 92px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* margin: 16px 32px; */
+  padding-top: 16px;
+  padding-bottom: 16px;
   color: var(--icon-color--);
   border: 1px solid var(--icon-color--);
   border-radius: 4px;
@@ -1116,8 +1146,12 @@ body.modal-open {
 .client__link:hover, .client__link:focus {
   border-color: var(--accent-color--);
   color: var(--accent-color--);
-  -webkit-transform: scale(2);
-          transform: scale(2);
+}
+@media screen and (min-width: 1200px) {
+  .client__link:hover, .client__link:focus {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
 }
 .client__icon {
   fill: currentColor;

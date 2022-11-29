@@ -1,27 +1,60 @@
 /* секція Постійні клієнти */
-.client-section {
-    padding-top: 94px;
-}
+
 .client {
-   &__title {
-    margin-bottom: 50px;
+    &-section {
+        padding-top: 94px;
+    }
+   
+    &__title {
+        margin-bottom: 30px;
+        @media screen and (max-width:$max-tablet) {
+        font-size: 28px;
+        line-height:calc(33 /28);
+        }
+        @media screen and (min-width:$min-desktop) {
+         margin-bottom: 50px;
+        }
     }
 
    &__list {
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
     align-items: center;
+    flex-wrap:wrap;
     gap: 30px;
+
+    @media screen and (min-width:$min-desktop) {
+       flex-wrap: nowrap;
+      
+     }
     }
+
+   &__item {
+
+        @media screen and (max-width:$max-mobile){
+        flex-basis: calc(($basis - 2*$padding-container) / 2);
+           
+    
+        @media screen and (min-width:$min-tablet) {
+            flex-basis: calc(($basis - 2*$padding-container * 2 ) / 3);
+            
+         }
+
+        //  @media screen and (min-width:$min-desktop)  {
+        //      flex-basis: calc(($basis - 2 * $padding-container * 5) / 6);
+        //  }
+
+        
+   } 
 
    &__link {
     display: flex;
-    width: 170px;
-    height: 92px;
     justify-content: center;
     align-items: center;
-    /* margin: 16px 32px; */
+    padding-top: 16px ;
+    padding-bottom: 16px;
     color: var(--icon-color--);
+
     border: 1px solid var(--icon-color--);
     border-radius: 4px;
     transition: var(--color--) var(--duration--) var(--cubic--),
@@ -31,15 +64,20 @@
         &:focus {
                 border-color: var(--accent-color--);
                 color: var(--accent-color--);
+                @media screen and (min-width:$min-desktop){
                 transform: scale(2);
+                 }
             }
 
     }
 
    &__icon {
+    // display:block;
     fill: currentColor;
-   }
+            
+    }
 }
+
 
 // .client__link:hover,
 // .client__link:focus {
