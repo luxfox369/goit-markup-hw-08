@@ -60,12 +60,15 @@
 
         @media screen  and (min-width:$min-mobile) {
         width:450px;
+        // height:460px;
         }
         @media screen and (min-width:$min-tablet) {
-          width: 354px;
+        width: 354px;
+        // height: 374px;
         }
         @media screen and (min-width:$min-desktop) {
-          width: 270px;
+        width: 270px
+        // height: 260px;
         }
     }
 

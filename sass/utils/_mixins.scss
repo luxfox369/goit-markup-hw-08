@@ -41,7 +41,9 @@
       }
 transform: translate($x__number,$y__number) scale(1); /* 100%*/ ;
 }
-
+// SASS loop for background color generation.
+//список кольорів
+$colors: "#F44336", "#3F51B5", "#4CAF50", "#00BCD4", "#E91E63", "#009688" ;
 @each $color in $colors {            /*цикл вибору/ кожен елемент списку знаситься в змінну $color*/
         $idx: index($colors, $color); /*в $idx записується поряд номер кольора в списку */
 

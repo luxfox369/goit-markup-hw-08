@@ -4,20 +4,23 @@
     @extend %fixed00-100;
     overflow-y: scroll; /*щоб не скролився контент під ним*/
     transition: opacity var(--duration--) var(--cubic--),
-        visibility var(--duration--) var(--cubic--);
-        &.is-hidden {
-            @extend %is-hidden;
-            & .modal {
-                transform: scale(0.01);
-            }
+                visibility var(--duration--) var(--cubic--);
+    &.is-hidden {
+        @extend %is-hidden;
+        & .modal {
+            transform: scale(0.01);
+        }
         }
 }
 
 .modal {
-    width: 528px;
-    height: 581px;
-    
-    @include centeredAbsolute($x__abs:right);
+    width: 450px;
+    height: 609px;
+    @media screen and (min-width:$min-desktop) {
+      width: 528px;
+      height: 581px;
+    }
+  @include centeredAbsolute($x__abs:right);
        background-color: #ffffff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);

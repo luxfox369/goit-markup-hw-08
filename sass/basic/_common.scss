@@ -17,8 +17,19 @@ body {
 }
 .big-container{
     margin: 0 auto;
-    max-width: $big-container;
-}
+    @media screen and (min-width:$min-mobile) {
+            width: $min-mobile;
+        }
+    
+        @media screen and (min-width:$min-tablet) {
+            width: $min-tablet;
+        }
+    
+        @media screen and (min-width:$min-desktop) {
+            width: $min-desktop;
+            max-width: $big-container;
+        }
+}        
 /* контейнер  */
 .container {
     margin: 0 auto;
@@ -56,8 +67,12 @@ body {
 /* h1 */
 .title-first {
     font-weight: 900;
+    font-size: 26px;
+    line-height: calc(42 / 26);
+    @media screen and (min-width:$min-desktop) {
     font-size: 44px;
     line-height: calc(60 / 44);
+    }
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;

@@ -201,7 +201,22 @@ body.modal-open {
 
 .big-container {
   margin: 0 auto;
-  max-width: 1600px;
+}
+@media screen and (min-width: 480px) {
+  .big-container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .big-container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .big-container {
+    width: 1200px;
+    max-width: 1600px;
+  }
 }
 
 /* контейнер  */
@@ -251,12 +266,18 @@ body.modal-open {
 /* h1 */
 .title-first {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.3636363636;
+  font-size: 26px;
+  line-height: 1.6153846154;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--title-color--);
+}
+@media screen and (min-width: 1200px) {
+  .title-first {
+    font-size: 44px;
+    line-height: 1.3636363636;
+  }
 }
 
 /* h2 */
@@ -622,19 +643,30 @@ body.modal-open {
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero.jpg");
   background-image: linear-gradient(to bottom right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
   background-repeat: no-repeat;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+}
+@media screen and (min-width: 1200px) {
+  .hero-section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 .hero__title.title-first {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  width: 696px;
+  width: 360px;
   -webkit-animation: slide-to-bottom 5s linear 200ms both;
           animation: slide-to-bottom 5s linear 200ms both;
 }
+@media screen and (min-width: 1200px) {
+  .hero__title.title-first {
+    width: 696px;
+  }
+}
 .hero__button {
-  padding: 10px 32px;
+  padding: 10px 24px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
@@ -652,6 +684,11 @@ body.modal-open {
   opacity: 0;
   animation: butjump 300ms ease-out 1s 14 alternate-reverse forwards;
 }
+@media screen and (min-width: 1200px) {
+  .hero__button {
+    padding: 10px 32px;
+  }
+}
 .hero__button:focus, .hero__button:hover {
   background-color: #188ce8;
 }
@@ -668,8 +705,8 @@ body.modal-open {
 }
 
 .modal {
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   position: absolute;
   right: 50%;
   top: 50%;
@@ -681,6 +718,12 @@ body.modal-open {
   border-radius: 4px;
   -webkit-transition: var(--transform--) 1s var(--cubic--), var(--transform--) 1s var(--cubic--);
   transition: var(--transform--) 1s var(--cubic--), var(--transform--) 1s var(--cubic--);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 /* кнопка закриття в модальному вікні */
@@ -735,60 +778,10 @@ body.modal-open {
 }
 .form__field {
   position: relative;
-}
-.form__agreement {
-  text-decoration: underline;
-  color: var(--accent-color--);
-}
-.form__label {
-  display: block;
-  text-align: left;
-  font-size: 12px;
-  line-height: 1.1666666667;
-  letter-spacing: 0.01em;
-  color: var(--text-color--);
-  margin-bottom: 4px;
-  /*.form__label--checkbox*/
-}
-.form__label--checkbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 8px;
-  margin: 20px 53px 30px 52px;
-  font-size: 14px;
-  line-height: 1.7142857143;
-  letter-spacing: 0.03em;
-  color: var(--text-color--);
-  position: relative;
-}
-.form__icon {
-  position: absolute;
-  top: 65%;
-  left: 12px;
-  color: var(--title-ccolor--);
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: var(--color--) var(--duration) var(--cubic--);
-  transition: var(--color--) var(--duration) var(--cubic--);
-  /*form__icon*/
-  /*.form__icon--checkbox-1615blue*/
-}
-.form__input:focus + .form__icon, .form__input:hover + .form__icon {
-  color: var(--accent-color--);
-}
-.form__icon--checkbox-1615blue {
-  display: inline-block;
-  border: 2px solid #2a2a2a;
-  border-radius: 4px;
-  -webkit-transition: var(--bgcolor) var(--duration--) var(--cubic--), var(--bordercolor) var(--duration--) var(--cubic--);
-  transition: var(--bgcolor) var(--duration--) var(--cubic--), var(--bordercolor) var(--duration--) var(--cubic--);
+  margin-left: 40px;
+  margin-right: 40px;
 }
 .form__input {
-  width: 448px;
   font-size: 16px;
   outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -800,6 +793,16 @@ body.modal-open {
   /*.form__input--placeholder*/
   /*.form__input*/
   /*.form__input--checkbox*/
+}
+@media screen and (min-width: 480px) {
+  .form__input {
+    width: 370px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form__input {
+    width: 448px;
+  }
 }
 .form__input--h40-pl42 {
   height: 40px;
@@ -854,6 +857,68 @@ body.modal-open {
 .form__input--checkbox:checked + .form__icon--checkbox-1615blue {
   background-color: var(--accent-color--);
   border-color: var(--accent-color--);
+}
+.form__icon {
+  position: absolute;
+  top: 65%;
+  left: 12px;
+  color: var(--title-ccolor--);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: var(--color--) var(--duration) var(--cubic--);
+  transition: var(--color--) var(--duration) var(--cubic--);
+  /*form__icon*/
+  /*.form__icon--checkbox-1615blue*/
+}
+.form__input:focus + .form__icon, .form__input:hover + .form__icon {
+  color: var(--accent-color--);
+}
+.form__icon--checkbox-1615blue {
+  display: inline-block;
+  border: 2px solid #2a2a2a;
+  border-radius: 4px;
+  -webkit-transition: var(--bgcolor) var(--duration--) var(--cubic--), var(--bordercolor) var(--duration--) var(--cubic--);
+  transition: var(--bgcolor) var(--duration--) var(--cubic--), var(--bordercolor) var(--duration--) var(--cubic--);
+}
+.form__agreement {
+  text-decoration: underline;
+  color: var(--accent-color--);
+}
+.form__label {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.03em;
+  color: var(--text-color--);
+  margin-bottom: 4px;
+  /*.form__label--checkbox*/
+}
+@media screen and (min-width: 1200px) {
+  .form__label {
+    font-size: 14px;
+    line-height: 1.7142857143;
+  }
+}
+.form__label--checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  margin: 17px 40px 30px 40px;
+  font-size: 14px;
+  line-height: 1.7142857143;
+  letter-spacing: 0.03em;
+  color: var(--text-color--);
+  position: relative;
+}
+@media screen and (min-width: 1200px) {
+  .form__label--checkbox {
+    margin: 20px 52px 30px 52px;
+  }
 }
 
 /* кнопка відправлення форми заявку */

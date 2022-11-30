@@ -10,9 +10,14 @@
             rgba(47, 48, 58, 0.4)),
         url("../images/hero.jpg");
 
-    background-repeat: no-repeat;    
-    padding-top: 200px;
-    padding-bottom: 200px;
+    background-repeat: no-repeat; 
+    padding-top: 118px;
+    padding-bottom: 118px;
+    @media screen and (min-width:$min-desktop){
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+    
     
   }
 
@@ -23,12 +28,18 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
+    width: 360px;
+    @media screen and (min-width:$min-desktop) {
     width: 696px;
+    }
     animation: slide-to-bottom 5s linear 200ms both;
    }
 
   &__button {
+    padding: 10px 24px;
+    @media screen and (min-width:$min-desktop) {
     padding: 10px 32px;
+    } 
     font-weight: 700;
     font-size: 16px;
     line-height: calc(30 / 16);
