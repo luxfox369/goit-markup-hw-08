@@ -56,8 +56,11 @@
         }
     &__image {
         display: block;
-        width:450px;
         margin-bottom: 30px;
+
+        @media screen  and (min-width:$min-mobile) {
+        width:450px;
+        }
         @media screen and (min-width:$min-tablet) {
           width: 354px;
         }

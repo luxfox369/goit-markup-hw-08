@@ -1,21 +1,26 @@
 /* Форми підписки */
 .footer-submit {
     margin:0 auto;
-    width: 450px;
     display: flex;
     flex-direction: column;
-    justify-content:center;
-    gap:20px;
-   @media screen and (min-width:$min-desktop){
-    width: 570px;
-    flex-direction:row;
-    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    @media screen and (min-width:$min-desktop) {
+       width: 450px;
+    }
+    @media screen and (min-width:$min-desktop){
+      width: 570px;
+      flex-direction:row;
+      align-items: center;
    }
 }
 .submit{
    &__label {
     display: block;
     text-align: center;
+    @media screen and (min-width:$min-desktop) {
+      text-align:left;
+    }
     margin-bottom: 20px;
     text-transform: uppercase;
     color: var(--prime-bg-color--);
@@ -27,9 +32,10 @@
    }
 
    &__input {
-    @media screen and (max-width:$max-tablet){
+    @media screen and (min-width:$min-mobile) and (max-width:$max-tablet){
       display:block;
       width:450px;
+      margin:0 auto;
     }
     background-color: var(--second-bg-color--);
     color: var(--prime-bg-color--);

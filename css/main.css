@@ -492,6 +492,30 @@ body.modal-open {
   fill: var(--accent-color--);
   color: var(--accent-color--);
 }
+@media screen and (max-width: 767.98px) {
+  .contact__icon.envelope {
+    width: 14px;
+    hight: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__icon.envelope {
+    width: 16px;
+    hight: 12px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .contact__icon.phone {
+    width: 10px;
+    hight: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__icon.phone {
+    width: 10px;
+    hight: 16px;
+  }
+}
 
 .menu-toggle {
   min-height: 40px;
@@ -874,10 +898,9 @@ body.modal-open {
   }
 }
 
-@media screen and (max-width: 767.97px) {
-  .feature__item {
-    margin-bottom: 30px;
-  }
+.feature__item {
+  width: 100%;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .feature__item {
@@ -1043,8 +1066,12 @@ body.modal-open {
 }
 .team-card__image {
   display: block;
-  width: 450px;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 480px) {
+  .team-card__image {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 768px) {
   .team-card__image {
@@ -1211,9 +1238,9 @@ body.modal-open {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 
@@ -1342,7 +1369,6 @@ body.modal-open {
 /* Форми підписки */
 .footer-submit {
   margin: 0 auto;
-  width: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1354,6 +1380,11 @@ body.modal-open {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-submit {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-submit {
@@ -1380,6 +1411,11 @@ body.modal-open {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+@media screen and (min-width: 1200px) {
+  .submit__label {
+    text-align: left;
+  }
+}
 .submit__input {
   background-color: var(--second-bg-color--);
   color: var(--prime-bg-color--);
@@ -1397,10 +1433,11 @@ body.modal-open {
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 }
-@media screen and (max-width: 1199.97px) {
+@media screen and (min-width: 480px) and (max-width: 1199.97px) {
   .submit__input {
     display: block;
     width: 450px;
+    margin: 0 auto;
   }
 }
 .submit__input::-webkit-input-placeholder {

@@ -44,6 +44,29 @@
                 fill: var(--accent-color--);
                 color: var(--accent-color--);
             }
+    &.envelope {
+            @media screen and (max-width:767.98px) {
+                width: 14px;
+                hight: 10px;
+            }
+    
+            @media screen and (min-width:1200px) {
+                width: 16px;
+                hight: 12px;
+            }
+    }
+    
+    &.phone {
+            @media screen and (max-width:767.98px) {
+                width: 10px;
+                hight: 14px;
+            }
+    
+            @media screen and (min-width:1200px) {
+                width: 10px;
+                hight: 16px;
+            }
+    }
 
 }
 
