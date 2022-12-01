@@ -17,21 +17,22 @@ body {
 }
 .big-container{
     margin: 0 auto;
-    @media screen and (min-width:$min-mobile) {
-            width: $min-mobile;
-        }
+    // @media screen and (min-width:$min-mobile) {
+    //         width: $min-mobile;
+    //     }
     
-        @media screen and (min-width:$min-tablet) {
-            width: $min-tablet;
-        }
+    //     @media screen and (min-width:$min-tablet) {
+    //         width: $min-tablet;
+    //     }
     
-        @media screen and (min-width:$min-desktop) {
-            width: $min-desktop;
-            max-width: $big-container;
-        }
+    //     @media screen and (min-width:$min-desktop) {
+    //         width: $min-desktop;
+    max-width: $big-container;
+        // }
 }        
 /* контейнер  */
 .container {
+    width:100vw;
     margin: 0 auto;
     padding: 0 $padding-container;
     // width:100vw;

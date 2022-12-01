@@ -1,25 +1,29 @@
 /* header section*/
 
-.header-section {
+.header {
+  &-section {
     /*  шрифт  header*/
     font-weight: 500;
     font-size: 40px;
     line-height: calc(47 / 40);
     letter-spacing: 0.02em;
 
-    @media screen and (min-width:$min-tablet){
-    font-weight: 500;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.02em;
-    border-bottom: 1px solid#ECECEC;
+    @media screen and (min-width: $min-tablet) {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: calc(16 / 14);
+      letter-spacing: 0.02em;
+      border-bottom: 1px solid#ECECEC;
     }
+  }
+  /* весь header у flex container */
+  &__container {
+    @media screen and(min-width:$min-mobile) and (max-width: $max-mobile) {
+      height: 60px;
+    }
+    @media screen and (min-width: $min-tablet) {
+      display: flex;
+      align-items: center;
+    }
+  }
 }
-
-/* весь header у flex container */
-// .header__container {
-//    @media screen and (min-width:$tablet){ 
-//     display: flex;
-//     align-items: center;
-//    }
-// }
