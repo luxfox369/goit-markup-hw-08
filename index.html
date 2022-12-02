@@ -33,7 +33,11 @@
           <span class="logo__web logo__web--blue">Web</span>
           <span class="logo__studio logo__studio--black">Studio</span>
         </a>
-
+        <button class="menu-toggle btn js-open-menu">
+          <svg class="menu-toggle-icon" width="24" height="16">
+            <use href="./images/icons.svg#burger"></use>
+          </svg>
+        </button>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -71,7 +75,6 @@
     </header>
     <!-- унікальний контент сторінки -->
     <main>
-      <!--Головний банер  сайта -->
       <section class="hero-section big-container">
         <h1 class="hero__title title-first">
           Ефективні рішення для вашого бізнесу
@@ -168,7 +171,7 @@
           </div>
         </div>
       </section>
-      <!-- Особливості -->
+
       <section class="feature-section section container">
         <h2 class="feature__title title-second visually-hidden">Особливості</h2>
         <ul class="feature__list">
@@ -221,7 +224,7 @@
           </li>
         </ul>
       </section>
-      <!-- Чим ми займаємося deal-->
+
       <section class="deal-section section">
         <div class="container">
           <h2 class="deal__title title-second">Чим ми займаємося</h2>
@@ -259,7 +262,7 @@
           </ul>
         </div>
       </section>
-      <!-- Наша команда -->
+
       <section class="team-section section big-container">
         <div class="container">
           <h2 class="team__title title-second">Наша команда</h2>
@@ -560,29 +563,25 @@
       </div>
     </footer>
     <!-- Mobile menu -->
-    <!-- <div class="menu-container js-menu-container" id="mobile-menu">
-      <button class="menu-toggle js-close-menu">
-        <svg class="burger" width="24" height="16">
-          <use href="./images/icons.svg#burger"></use>
-        </svg>
-      </button>
-
-      <ul class="mobile-menu list">
-        <li><a href="" class="link">About</a></li>
-        <li><a href="" class="link">Products</a></li>
-        <li><a href="" class="link">Contacts</a></li>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <ul class="mobile-nav list">
+        <li><a href="" class="link link--current">Студія</a></li>
+        <li><a href="./portfolio.html" class="link">Портфоліо</a></li>
+        <li><a href="#contacts" class="link">Контакти</a></li>
       </ul>
 
       <ul class="mobile-contacts list">
-        <li><a href="" class="link">+38 096 111 11 11</a></li>
-        <li><a href="" class="link">info@devstudio.com</a></li>
+        <li><a href="" class="link tel">+38 096 111 11 11</a></li>
+        <li><a href="" class="link mail">info@devstudio.com</a></li>
       </ul>
 
       <ul class="mobile-socials list">
         <li class="mobile-socials-item">
           <a href="" class="link">Instagram</a>
         </li>
-        <li class="mobile-socials-item"><a href="" class="link">Twitter</a></li>
+        <li class="mobile-socials-item">
+          <a href="" class="link">Twitter</a>
+        </li>
         <li class="mobile-socials-item">
           <a href="" class="link">Facebook</a>
         </li>
@@ -590,12 +589,12 @@
           <a href="" class="link">LinkedIn</a>
         </li>
       </ul>
-      <button data-modal-close class="button-close btn">
-        <svg class="menu-close" width="40" height="40">
+      <button class="js-close-menu mobile-button-close btn">
+        <svg class="icon-close" width="19" height="19">
           <use href="./images/icons.svg#close_24"></use>
         </svg>
       </button>
-    </div> -->
+    </div>
 
     <!-- Scripts -->
     <script
