@@ -53,6 +53,7 @@
   }
   &__image {
     display: block;
+    width: calc(100% - 2 * $padding-container);
     margin-bottom: 30px;
 
     @media screen and (min-width: $min-mobile) {

@@ -1437,6 +1437,7 @@ body.modal-open {
 }
 .team-card__image {
   display: block;
+  width: calc(100% - 30px);
   margin-bottom: 30px;
 }
 @media screen and (min-width: 480px) {
