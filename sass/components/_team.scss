@@ -1,94 +1,90 @@
 /* секція Наша команда */
 /* h2 Наша команда - title-second */
 .team-section {
-    background: #f5f4fa;
-} 
+  background: #f5f4fa;
+}
 
 .team__title.title-second {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 
-    @media screen and (max-width:$max-tablet){
-        font-size:28px;
-        line-height:calc(33 / 28);
-    }
-    @media screen and (min-width:$min-desktop){
-         margin-bottom: 50px;
-}
+  @media screen and (max-width: $max-tablet) {
+    font-size: 28px;
+    line-height: calc(33 / 28);
+  }
+  @media screen and (min-width: $min-desktop) {
+    margin-bottom: 50px;
+  }
 }
 .team-card {
-    &__list {
-        @media screen and (min-width:$min-tablet) {
-            display: flex;
-            flex-wrap:wrap;
-            justify-content: center;
-            gap: 2*$padding-container;
-        }    
-         @media screen and (min-width:$min-desktop) {
-             flex-wrap: nowrap; 
-        }
+  &__list {
+    @media screen and (min-width: $min-tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2 * $padding-container;
     }
-    &__item {
-            
-            background-color: var(--prime-bg-color--);
-            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-                0px 2px 1px rgba(0, 0, 0, 0.2);
-            border-radius: 0px 0px 4px 4px;
-
-            @media screen and (max-width:$max-mobile) {
-              margin-bottom: 30px;
-            }
-            @media screen and (min-width:$min-tablet) {
-              flex-basis: calc((100% - 2 * $padding-container ) / 2);
-                // margin-right: 30px;
-            }
-            @media  screen and (min-width:$min-desktop){ 
-              flex-basis: calc((100% - 2 * $padding-container * 3) / 4);
-            }
-            
-            transition: var(--transform--) 1s var(--cubic--);
-    
-                
-            &:hover {
-                @media screen and (min-width:$min-desktop) {
-                transform: scale(1.5);
-                }
-            }
-        }
-    &__image {
-        display: block;
-        margin-bottom: 30px;
-
-        @media screen  and (min-width:$min-mobile) {
-        width:450px;
-        // height:460px;
-        }
-        @media screen and (min-width:$min-tablet) {
-        width: 354px;
-        // height: 374px;
-        }
-        @media screen and (min-width:$min-desktop) {
-        width: 270px
-        // height: 260px;
-        }
+    @media screen and (min-width: $min-desktop) {
+      flex-wrap: nowrap;
     }
+  }
+  &__item {
+    background-color: var(--prime-bg-color--);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 
-    &__name {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: calc(18.75 / 16);
-        letter-spacing: 0.03em;
-        color: var(--title-ccolor--);
-        text-align: center;
-        margin-bottom: 10px;
+    @media screen and (max-width: $max-mobile) {
+      margin-bottom: 30px;
     }
+    @media screen and (min-width: $min-tablet) {
+      flex-basis: calc((100% - 2 * $padding-container) / 2);
+      // margin-right: 30px;
+    }
+    @media screen and (min-width: $min-desktop) {
+      flex-basis: calc((100% - 2 * $padding-container * 3) / 4);
+    }
+    transition: var(--transform--) 1s var(--cubic--);
 
-    &__position {
-        font-size: 16px;
-        line-height: calc(18.75 / 16);
-        text-align: center;
-        letter-spacing: 0.03em;
-        color: var(--text-color--);
-        /* margin-bottom: 16px; */
+    &:hover {
+      @media screen and (min-width: $min-desktop) {
+        transform: scale(1.5);
+      }
     }
+  }
+  &__image {
+    display: block;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $min-mobile) {
+      width: 450px;
+      // height:460px;
+    }
+    @media screen and (min-width: $min-tablet) {
+      width: 354px;
+      // height: 374px;
+    }
+    @media screen and (min-width: $min-desktop) {
+      width: 270px;
+      height: 260px;
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(18.75 / 16);
+    letter-spacing: 0.03em;
+    color: var(--title-ccolor--);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__position {
+    font-size: 16px;
+    line-height: calc(18.75 / 16);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--text-color--);
+    /* margin-bottom: 16px; */
+  }
 }
-

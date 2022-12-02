@@ -1,17 +1,26 @@
 /* porfolio section */
 /* h1 Портфоліо -title-first схований */
-/* меню фільтра проектів */
-/* меню фільтра - flex container */
-.filter{
+/* кнопки фільтра проектів */
+.filter {
   &__list {
+    padding-bottom: 30px;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    @media screen and (max-width: $max-mobile) {
+      max-width: 326px;
+    }
+    @media screen and (min-width: $min-tablet) {
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+    @media screen and (min-width: $min-desktop) {
+      margin-bottom: 48px;
+    }
   }
 
-/* кнопка за замовчанням inline */
-/* кнопки фільтра проектів при hover */
+  /* кнопка за замовчанням inline */
   &__button {
     display: inline-block;
     text-align: center;
@@ -25,19 +34,17 @@
     padding: 6px 22px;
     scale: (0.99);
     transition: var(--color--) var(--duration--) var(--cubic--),
-        var(--bgcolor--) var(--duration--) var(--cubic--),
-        var(--transform--) var(--duration--) var(--cubic--);
+      var(--bgcolor--) var(--duration--) var(--cubic--),
+      var(--transform--) var(--duration--) var(--cubic--);
     &:focus,
     &:hover {
-            color: var(--prime-bg-color--);
-            background-color: var(--accent-color--);
-            transform: scale(1.15);
-        }
+      color: var(--prime-bg-color--);
+      background-color: var(--accent-color--);
+      transform: scale(1.15);
+    }
   }
 }
 /* Перша кнопка має інші падінги */
 /* .filter__button.all {
   padding: 6px 25px;
 } */
-
-

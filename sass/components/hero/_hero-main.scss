@@ -1,45 +1,60 @@
 /* стилі index */
 /* секція hero */
 /* hero  title-first */
-.hero{
+.hero {
   &-section {
     color: var(--prime-bg-color--);
     background: var(--second-bg-color--);
-    background-image: linear-gradient(to bottom right,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url("../images/hero.jpg");
+    background-image: linear-gradient(
+        to bottom right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero.jpg");
 
-    background-repeat: no-repeat; 
-    padding-top: 118px;
-    padding-bottom: 118px;
-    @media screen and (min-width:$min-desktop){
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    // @media screen and (min-width: $min-mobile) {
+    //   max-width: $max-mobile;
+    // }
+    // @media screen and (min-width: $min-tablet) {
+    //   max-width: $max-tablet;
+    // }
+    // @media screen and (min-width: $min-desktop) {
+    //   max-width: $big-container;
+    // }
+
+    padding-top: calc(33%);
+    padding-bottom: calc(33%);
+    @media screen and (min-width: $min-mobile) {
+      padding-top: 118px;
+      padding-bottom: 118px;
+    }
+    @media screen and (min-width: $min-desktop) {
       padding-top: 200px;
       padding-bottom: 200px;
     }
-    
-    
   }
 
-/* анімація елемент падає зверху букви розїжджаються і все стає на місце */
-
+  /* анімація елемент падає зверху букви розїжджаються і все стає на місце */
 
   &__title.title-first {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
     width: 360px;
-    @media screen and (min-width:$min-desktop) {
-    width: 696px;
+    @media screen and (min-width: $min-desktop) {
+      width: 696px;
     }
     animation: slide-to-bottom 5s linear 200ms both;
-   }
+  }
 
   &__button {
     padding: 10px 24px;
-    @media screen and (min-width:$min-desktop) {
-    padding: 10px 32px;
-    } 
+    @media screen and (min-width: $min-desktop) {
+      padding: 10px 32px;
+    }
     font-weight: 700;
     font-size: 16px;
     line-height: calc(30 / 16);
@@ -55,11 +70,9 @@
     opacity: 0;
     animation: butjump 300ms ease-out 1s 14 alternate-reverse forwards;
     // на кнопку hover/focus
-        &:focus,
-        &:hover {
-                background-color: #188ce8;
-            }
-
-   }
-
+    &:focus,
+    &:hover {
+      background-color: #188ce8;
+    }
+  }
 }
