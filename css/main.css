@@ -514,25 +514,41 @@ body.modal-open {
   color: var(--text-color--);
 }
 
-@media screen and (min-width: 480px) {
-  .mobile-socials {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 10px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
+.mobile-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-@media screen and (max-width: 480px) {
-  .mobile-socials-item {
-    display: block;
-    width: calc(100% - 30px);
-    margin: 0 auto;
-  }
+.mobile-socials-item {
+  position: relative;
+  -ms-flex-preferred-size: calc((100% - 30px) / 4);
+      flex-basis: calc((100% - 30px) / 4);
+}
+.mobile-socials-item:not(:last-child) {
+  padding-right: 10px;
+}
+.mobile-socials-item:not(:first-child) {
+  padding-left: 10px;
+}
+.mobile-socials-item:not(:last-child)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -10px;
+  bottom: 10px;
+  width: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 .mobile-socials .link {
+  display: block;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2222222222;
@@ -886,25 +902,41 @@ body.modal-open {
   color: var(--text-color--);
 }
 
-@media screen and (min-width: 480px) {
-  .mobile-socials {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 10px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
+.mobile-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-@media screen and (max-width: 480px) {
-  .mobile-socials-item {
-    display: block;
-    width: calc(100% - 30px);
-    margin: 0 auto;
-  }
+.mobile-socials-item {
+  position: relative;
+  -ms-flex-preferred-size: calc((100% - 30px) / 4);
+      flex-basis: calc((100% - 30px) / 4);
+}
+.mobile-socials-item:not(:last-child) {
+  padding-right: 10px;
+}
+.mobile-socials-item:not(:first-child) {
+  padding-left: 10px;
+}
+.mobile-socials-item:not(:last-child)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -10px;
+  bottom: 10px;
+  width: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 .mobile-socials .link {
+  display: block;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2222222222;
