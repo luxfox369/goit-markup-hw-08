@@ -26,9 +26,6 @@
 }
 
 .menu-container {
-  @media screen and (max-width: $min-mobile) {
-    width: calc(100% - 2 * $padding-container);
-  }
   position: fixed;
   top: 0;
   left: 0;

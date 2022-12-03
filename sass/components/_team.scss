@@ -34,6 +34,7 @@
     border-radius: 0px 0px 4px 4px;
 
     @media screen and (max-width: $max-mobile) {
+      width: 100%;
       margin-bottom: 30px;
     }
     @media screen and (min-width: $min-tablet) {
@@ -53,7 +54,7 @@
   }
   &__image {
     display: block;
-    width: calc(100% - 2 * $padding-container);
+    width: 100%;
     margin-bottom: 30px;
 
     @media screen and (min-width: $min-mobile) {
@@ -66,11 +67,12 @@
     }
     @media screen and (min-width: $min-desktop) {
       width: 270px;
-      height: 260px;
+      // height: 260px;
     }
   }
 
   &__name {
+    width: 100%;
     font-weight: 500;
     font-size: 16px;
     line-height: calc(18.75 / 16);
@@ -81,6 +83,7 @@
   }
 
   &__position {
+    width: 100%;
     font-size: 16px;
     line-height: calc(18.75 / 16);
     text-align: center;
