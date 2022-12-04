@@ -230,31 +230,64 @@
           <h2 class="deal__title title-second">Чим ми займаємося</h2>
           <ul class="deal__list">
             <li class="deal__item deal__item--wrapper">
-              <img
-                class="deal__img"
-                src="./images/view1.jpg"
-                alt="Найкращі алгоритми"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/deal/deal1_lg@1x.jpg 1x,
+                    ./images/deal/deal1_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="deal__img"
+                  src="./images/deal/deal1_lg@1x.jpg"
+                  alt="Найкращі алгоритми"
+                  loading="lazy"
+                />
+              </picture>
               <div class="overlay--box">
                 <p class="overlay__text">Десктопні додатки</p>
               </div>
             </li>
             <li class="deal__item deal__item--wrapper">
-              <img
-                class="deal__img"
-                src="./images/view2.jpg"
-                alt="Адаптуємо до різних дівайсів"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/deal/deal2_lg@1x.jpg 1x,
+                    ./images/deal/deal2_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="deal__img"
+                  src="./images/deal/deal2_lg@1x.jpg"
+                  alt="Адаптуємо до різних дівайсів"
+                  loading="lazy"
+                />
+              </picture>
               <div class="overlay--box">
                 <p class="overlay__text">Мобільні додатки</p>
               </div>
             </li>
             <li class="deal-item deal__item--wrapper">
-              <img
-                class="deal__img"
-                src="./images/view3.jpg"
-                alt="Професійний дизайн"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/deal/deal3_lg@1x.jpg 1x,
+                    ./images/deal/deal3_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="deal__img"
+                  src="./images/deal/deal3_lg@1x.jpg"
+                  alt="Професійний дизайн"
+                  loading="lazy"
+                />
+              </picture>
               <div class="overlay--box">
                 <p class="overlay__text">Дизайнерські рішення</p>
               </div>
@@ -268,11 +301,38 @@
           <h2 class="team__title title-second">Наша команда</h2>
           <ul class="team-card__list">
             <li class="team-card__item">
-              <img
-                class="team-card__image"
-                src="./images/portrait1.jpg"
-                alt="Ігор Дем'яненко"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/team/img1_lg@1x.jpg 1x,
+                    ./images/team/img1_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./images/team/img1_md@1x.jpg 1x,
+                    ./images/team/img1_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:480px)"
+                  srcset="
+                    ./images/team/img1_sm@1x.jpg 1x,
+                    ./images/team/img1_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team-card__image"
+                  src="./images/team/img1_sm@1x.jpg"
+                  alt="Продакт дизайнер Ігор Дем'яненко"
+                  loading="lazy"
+                />
+              </picture>
               <h3 class="team-card__name no-uppercase">Ігор Дем'яненко</h3>
               <p class="team-card__position">Product Designer</p>
               <ul class="social__list">
@@ -307,11 +367,38 @@
               </ul>
             </li>
             <li class="team-card__item">
-              <img
-                class="team-card__image"
-                src="./images/portrait2.jpg"
-                alt="Ольга Рєпіна"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/team/img2_lg@1x.jpg 1x,
+                    ./images/team/img2_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./images/team/img2_md@1x.jpg 1x,
+                    ./images/team/img2_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:480px)"
+                  srcset="
+                    ./images/team/img2_sm@1x.jpg 1x,
+                    ./images/team/img2_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team-card__image"
+                  src="./images/team/img2_sm@1x.jpg"
+                  alt="Фронтенд дівелопер Ольга Рєпіна"
+                  loading="lazy"
+                />
+              </picture>
               <h3 class="team-card__name no-uppercase">Ольга Рєпіна</h3>
               <p class="team-card__position">Frontend Developer</p>
               <ul class="social__list">
@@ -346,11 +433,38 @@
               </ul>
             </li>
             <li class="team-card__item">
-              <img
-                class="team-card__image"
-                src="./images/portrait3.jpg"
-                alt="Микола Тарасов"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/team/img3_lg@1x.jpg 1x,
+                    ./images/team/img3_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./images/team/img3_md@1x.jpg 1x,
+                    ./images/team/img3_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:480px)"
+                  srcset="
+                    ./images/team/img3_sm@1x.jpg 1x,
+                    ./images/team/img3_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team-card__image"
+                  src="./images/team/img3_sm@1x.jpg"
+                  alt="Маркетінг Микола Тарасов"
+                  loading="lazy"
+                />
+              </picture>
               <h3 class="team-card__name no-uppercase">Микола Тарасов</h3>
               <p class="team-card__position">Marketing</p>
               <ul class="social__list">
@@ -385,11 +499,38 @@
               </ul>
             </li>
             <li class="team-card__item">
-              <img
-                class="team-card__image"
-                src="./images/portrait4.jpg"
-                alt="Михайло Єрмаков"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/team/img4_lg@1x.jpg 1x,
+                    ./images/team/img4_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./images/team/img4_md@1x.jpg 1x,
+                    ./images/team/img4_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:480px)"
+                  srcset="
+                    ./images/team/img4_sm@1x.jpg 1x,
+                    ./images/team/img4_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team-card__image"
+                  src="./images/team/img4_sm@1x.jpg"
+                  alt="Дизайнер Михайло Єрмаков"
+                  loading="lazy"
+                />
+              </picture>
               <h3 class="team-card__name no-uppercase">Михайло Єрмаков</h3>
               <p class="team-card__position">UI Designer</p>
               <ul class="social__list">

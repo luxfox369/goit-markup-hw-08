@@ -203,7 +203,11 @@ body.modal-open {
 
 .big-container {
   margin: 0 auto;
-  max-width: 1600px;
+}
+@media screen and (min-width: 1200px) {
+  .big-container {
+    max-width: 1600px;
+  }
 }
 
 /* контейнер  */
@@ -312,6 +316,7 @@ body.modal-open {
 }
 @media screen and (min-width: 768px) {
   .logo--transform {
+    margin-right: 87px;
     margin-top: 0px;
     margin-bottom: 0px;
     -webkit-transition: -webkit-transform 500ms linear;
@@ -322,6 +327,11 @@ body.modal-open {
   .logo--transform:hover {
     -webkit-transform: scale(2);
             transform: scale(2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo--transform {
+    margin-right: 93px;
   }
 }
 .logo__web--blue {
@@ -431,8 +441,8 @@ body.modal-open {
   padding: 48px 83px 48px 40px;
   background-color: var(--prime-bg-color--);
   z-index: 999;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(300%);
+          transform: translateX(300%);
   -webkit-transition: -webkit-transform 250ms var(--cubic--);
   transition: -webkit-transform 250ms var(--cubic--);
   transition: transform 250ms var(--cubic--);
@@ -814,8 +824,8 @@ body.modal-open {
   padding: 48px 83px 48px 40px;
   background-color: var(--prime-bg-color--);
   z-index: 999;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(300%);
+          transform: translateX(300%);
   -webkit-transition: -webkit-transform 250ms var(--cubic--);
   transition: -webkit-transform 250ms var(--cubic--);
   transition: transform 250ms var(--cubic--);
@@ -961,43 +971,62 @@ body.modal-open {
   /* анімація елемент падає зверху букви розїжджаються і все стає на місце */
 }
 .hero-section {
+  padding-top: 118px;
+  padding-bottom: 118px;
   color: var(--prime-bg-color--);
   background: var(--second-bg-color--);
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero.jpg");
-  background-image: linear-gradient(to bottom right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
-  padding-top: 33%;
-  padding-bottom: 33%;
+  background-position: center;
 }
 @media screen and (min-width: 480px) {
   .hero-section {
-    padding-top: 118px;
-    padding-bottom: 118px;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero_sm@1x.jpg");
+    background-image: linear-gradient(to bottom right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_sm@1x.jpg");
+  }
+}
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero_sm@2x.jpg");
+    background-image: linear-gradient(to bottom right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_sm@2x.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero_md@1x.jpg");
+    background-image: linear-gradient(to bottom right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_md@1x.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero_md@2x.jpg");
+    background-image: linear-gradient(to bottom right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_md@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
   .hero-section {
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero_lg@1x.jpg");
+    background-image: linear-gradient(to bottom right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_lg@1x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero_lg@2x.jpg");
+    background-image: linear-gradient(to bottom right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_lg@2x.jpg");
   }
 }
 .hero__title.title-first {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  width: 360px;
+  width: 696px;
   -webkit-animation: slide-to-bottom 5s linear 200ms both;
           animation: slide-to-bottom 5s linear 200ms both;
 }
-@media screen and (min-width: 1200px) {
-  .hero__title.title-first {
-    width: 696px;
-  }
-}
 .hero__button {
-  padding: 10px 24px;
+  padding: 10px 32px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
@@ -1014,11 +1043,6 @@ body.modal-open {
   transition: var(--bgcolor--) var(--duration--) var(--cubic--);
   opacity: 0;
   animation: butjump 300ms ease-out 1s 14 alternate-reverse forwards;
-}
-@media screen and (min-width: 1200px) {
-  .hero__button {
-    padding: 10px 32px;
-  }
 }
 .hero__button:focus, .hero__button:hover {
   background-color: #188ce8;
@@ -1354,10 +1378,6 @@ body.modal-open {
 }
 .deal__item--wrapper {
   position: relative;
-}
-.deal__img {
-  width: 370px;
-  max-height: 294px;
 }
 
 /* блок з текстом */

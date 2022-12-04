@@ -36,7 +36,7 @@
   padding: 48px 83px 48px 40px;
   background-color: var(--prime-bg-color--);
   z-index: 999;
-  transform: translateX(100%);
+  transform: translateX(300%);
   transition: transform 250ms var(--cubic--);
   &.is-open {
     transform: translateX(0);

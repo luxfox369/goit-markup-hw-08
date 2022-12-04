@@ -15,8 +15,9 @@
     display: flex;
     margin-top: 16px;
     margin-bottom: 16px;
-    // margin-right: 87px;
+
     @media screen and (min-width: $min-tablet) {
+      margin-right: 87px;
       margin-top: 0px;
       margin-bottom: 0px;
       transition: transform 500ms linear;
@@ -24,9 +25,9 @@
         transform: scale(2);
       }
     }
-    // @media screen and (min-width: $min-desktop) {
-    //   margin-right: 93px;
-    // }
+    @media screen and (min-width: $min-desktop) {
+      margin-right: 93px;
+    }
   }
   &__web--blue {
     color: var(--accent-color--);

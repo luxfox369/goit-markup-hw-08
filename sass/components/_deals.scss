@@ -1,62 +1,57 @@
 /* секція deal Чим ми займаємось */
 /*h2 - .title-second*/
-.deal{
+.deal {
   &-section {
-      padding-top: 0px;
-      // до desktop не показувати
-      @media screen and (max-width:$min-desktop) {
-          display: none;
-        }
-  
+    padding-top: 0px;
+    // до desktop не показувати
+    @media screen and (max-width: $min-desktop) {
+      display: none;
     }
-    
-   &__title.title-second {
-    margin-bottom: 50px;
-   }
+  }
 
-/* картинки в рядок */
-   &__list {
+  &__title.title-second {
+    margin-bottom: 50px;
+  }
+
+  /* картинки в рядок */
+  &__list {
     display: flex;
     justify-content: space-between;
-    gap:30px;
-   }
+    gap: 30px;
+  }
 
-// ширина ел-та
+  // ширина ел-та
   &__item {
     // flex-basis: calc( ($basis-desktop - 2 * $padding-container  * ($number-deals - 1)) / $number-deals);
-    &--wrapper{
-    position: relative;
+    &--wrapper {
+      position: relative;
     }
-   }
-   &__img {
-     width: 370px;
-     max-height: 294px;
-   }
-   
+  }
+  //  &__img {
+  //    width: 370px;
+  //    max-height: 294px;
+  //  }
 }
 
-
-
 /* блок з текстом */
-.overlay{
-    &--box{
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(47, 48, 58, 0.8);
-    }
-    &__text{
-        font-weight: 700;
-        font-size: 14px;
-        line-height: calc(16 / 14);
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        color: #ffffff;
-        text-align: center;
-        padding: 27px;
-          
-    }
+.overlay {
+  &--box {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    padding: 27px;
+  }
 }
 
 // .overlay--box {

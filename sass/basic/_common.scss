@@ -1,101 +1,92 @@
 /* глобальні налаштування */
 body {
-    width:100vw;
-    font-family: var(--prime-font-family--);
-    /*'Roboto', sans-serif*/
-    color: var(--text-color--);
-    background-color: var(--prime-bg-color--);
-    &.modal-open{
-      overflow: hidden;
-    }
+  width: 100vw;
+  font-family: var(--prime-font-family--);
+  /*'Roboto', sans-serif*/
+  color: var(--text-color--);
+  background-color: var(--prime-bg-color--);
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 /*загальне налаштування для кнопок */
 .btn {
-    font-family: var(--prime-font-family--);
-    border: none;
-    cursor: pointer;
+  font-family: var(--prime-font-family--);
+  border: none;
+  cursor: pointer;
 }
-.big-container{
-    margin: 0 auto;
-    // @media screen and (min-width:$min-mobile) {
-    //         width: $min-mobile;
-    //     }
-    
-    //     @media screen and (min-width:$min-tablet) {
-    //         width: $min-tablet;
-    //     }
-    
-    //     @media screen and (min-width:$min-desktop) {
-    //         width: $min-desktop;
+.big-container {
+  margin: 0 auto;
+  @media screen and (min-width: $min-desktop) {
     max-width: $big-container;
-        // }
-}        
+  }
+}
 /* контейнер  */
 .container {
-    width:100vw;
-    margin: 0 auto;
-    padding: 0 $padding-container;
-    // width:100vw;
-  @media screen and (min-width:$min-mobile) {
-        width:$min-mobile;
-    }
-  @media screen and (min-width:$min-tablet) {
-        width:$min-tablet;
-    }
-  @media screen and (min-width:$min-desktop) {
-        width:$min-desktop;
-    }
+  width: 100vw;
+  margin: 0 auto;
+  padding: 0 $padding-container;
+  // width:100vw;
+  @media screen and (min-width: $min-mobile) {
+    width: $min-mobile;
+  }
+  @media screen and (min-width: $min-tablet) {
+    width: $min-tablet;
+  }
+  @media screen and (min-width: $min-desktop) {
+    width: $min-desktop;
+  }
 }
 /* спільна властивість секцій */
 .section {
-    padding-bottom: 60px;
-    padding-top: 60px;
-    @media screen and (min-width:$min-desktop){
-       padding-bottom: 94px;
-       padding-top: 94px;
-   }
+  padding-bottom: 60px;
+  padding-top: 60px;
+  @media screen and (min-width: $min-desktop) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 /* скриває елемент */
 .visually-hidden {
-    position: fixed;
-    transform: scale(0);
+  position: fixed;
+  transform: scale(0);
 }
 
 .uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 /* h1 */
 .title-first {
-    font-weight: 900;
-    font-size: 26px;
-    line-height: calc(42 / 26);
-    @media screen and (min-width:$min-desktop) {
+  font-weight: 900;
+  font-size: 26px;
+  line-height: calc(42 / 26);
+  @media screen and (min-width: $min-desktop) {
     font-size: 44px;
     line-height: calc(60 / 44);
-    }
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--title-color--);
+  }
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--title-color--);
 }
 
 /* h2 */
 .title-second {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: calc(42 / 36);
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--title-ccolor--);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-ccolor--);
 }
 
 /* h3 */
 .title-third {
-    text-align: center;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.03em;
-    color: var(--title-ccolor--);
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  color: var(--title-ccolor--);
 }
