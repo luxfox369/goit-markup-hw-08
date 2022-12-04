@@ -316,7 +316,6 @@ body.modal-open {
 }
 @media screen and (min-width: 768px) {
   .logo--transform {
-    margin-right: 87px;
     margin-top: 0px;
     margin-bottom: 0px;
     -webkit-transition: -webkit-transform 500ms linear;
@@ -327,11 +326,6 @@ body.modal-open {
   .logo--transform:hover {
     -webkit-transform: scale(2);
             transform: scale(2);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .logo--transform {
-    margin-right: 93px;
   }
 }
 .logo__web--blue {
