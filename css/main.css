@@ -185,6 +185,7 @@ a {
 /* глобальні налаштування */
 body {
   width: 100vw;
+  margin: 0 auto;
   font-family: var(--prime-font-family--);
   /*'Roboto', sans-serif*/
   color: var(--text-color--);
@@ -204,15 +205,24 @@ body.modal-open {
 .big-container {
   margin: 0 auto;
 }
+@media screen and (min-width: 480px) {
+  .big-container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .big-container {
+    width: 768px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .big-container {
-    max-width: 1600px;
+    width: 1600px;
   }
 }
 
 /* контейнер  */
 .container {
-  width: 100vw;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -580,7 +590,6 @@ body.modal-open {
   /* весь header у flex container */
 }
 .header-section {
-  /*  шрифт  header*/
   font-weight: 500;
   font-size: 40px;
   line-height: 1.175;
@@ -595,19 +604,25 @@ body.modal-open {
     border-bottom: 1px solid #ECECEC;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 767.97px) {
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 767.97px) {
   .header__container {
-    height: 60px;
+    position: relative;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767.97px) {
   .header__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    height: 60px;
   }
 }
 
@@ -624,12 +639,12 @@ body.modal-open {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-right: 96px;
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 1200px) {
   .nav__list {
-    margin-right: 318px;
+    margin-right: auto;
   }
 }
 
@@ -972,14 +987,10 @@ body.modal-open {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero_sm@1x.jpg");
+  background-image: linear-gradient(to bottom right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_sm@1x.jpg");
 }
-@media screen and (min-width: 480px) {
-  .hero-section {
-    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero_sm@1x.jpg");
-    background-image: linear-gradient(to bottom right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_sm@1x.jpg");
-  }
-}
-@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero-section {
     background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero_sm@2x.jpg");
     background-image: linear-gradient(to bottom right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_sm@2x.jpg");
@@ -1015,9 +1026,18 @@ body.modal-open {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  width: 696px;
   -webkit-animation: slide-to-bottom 5s linear 200ms both;
           animation: slide-to-bottom 5s linear 200ms both;
+}
+@media screen and (min-width: 480px) {
+  .hero__title.title-first {
+    width: 360px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title.title-first {
+    width: 696px;
+  }
 }
 .hero__button {
   padding: 10px 32px;
@@ -1792,7 +1812,7 @@ body.modal-open {
           justify-content: center;
   gap: 20px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 480px) {
   .footer-submit {
     width: 450px;
   }
@@ -1810,7 +1830,7 @@ body.modal-open {
   }
 }
 
-.submit__label {
+.submit__label--span {
   display: block;
   text-align: center;
   margin-bottom: 20px;
@@ -1823,7 +1843,7 @@ body.modal-open {
   text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
-  .submit__label {
+  .submit__label--span {
     text-align: left;
   }
 }

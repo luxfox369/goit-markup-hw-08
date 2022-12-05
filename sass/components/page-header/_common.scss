@@ -2,7 +2,6 @@
 
 .header {
   &-section {
-    /*  шрифт  header*/
     font-weight: 500;
     font-size: 40px;
     line-height: calc(47 / 40);
@@ -18,12 +17,16 @@
   }
   /* весь header у flex container */
   &__container {
-    @media screen and(min-width:$min-mobile) and (max-width: $max-mobile) {
-      height: 60px;
+    @media screen and (max-width: $max-mobile) {
+      position: relative;
     }
-    @media screen and (min-width: $min-tablet) {
-      display: flex;
-      align-items: center;
+    // @media screen and (max-width: $max-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // }
+    @media screen and (max-width: $max-mobile) {
+      height: 60px;
     }
   }
 }

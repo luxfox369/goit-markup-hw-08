@@ -5,10 +5,10 @@
   @media screen and (min-width: $min-tablet) {
     display: flex;
     justify-content: space-between;
-    margin-right: 96px;
+    margin-right: auto; //
   }
   @media screen and (min-width: $min-desktop) {
-    margin-right: 318px;
+    margin-right: auto; //
   }
 }
 

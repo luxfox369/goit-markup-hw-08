@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  @media screen and (min-width: $min-desktop) {
+  @media screen and (min-width: $min-mobile) {
     width: 450px;
   }
   @media screen and (min-width: $min-desktop) {
@@ -15,7 +15,7 @@
   }
 }
 .submit {
-  &__label {
+  &__label--span {
     display: block;
     text-align: center;
     @media screen and (min-width: $min-desktop) {
@@ -34,11 +34,7 @@
   &__input {
     display: block;
     width: 100%;
-    // @media screen and (min-width:$min-mobile) and (max-width:$max-tablet){
-    //   display:block;
-    // width:450px;
-    // margin:0 auto;
-    // }
+
     background-color: var(--second-bg-color--);
     color: var(--prime-bg-color--);
     font-weight: 400;
