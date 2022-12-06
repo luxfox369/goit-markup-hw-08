@@ -1,7 +1,7 @@
 /* глобальні налаштування */
 body {
-  width: 100vw;
-  margin: 0 auto;
+  // width: 100vw;
+  // margin: 0 auto;
   font-family: var(--prime-font-family--);
   /*'Roboto', sans-serif*/
   color: var(--text-color--);
@@ -16,18 +16,18 @@ body {
   border: none;
   cursor: pointer;
 }
-.big-container {
-  margin: 0 auto;
-  @media screen and (min-width: $min-mobile) {
-    width: $min-mobile;
-  }
-  @media screen and (min-width: $min-tablet) {
-    width: $min-tablet;
-  }
-  @media screen and (min-width: $min-desktop) {
-    width: $big-container;
-  }
-}
+// .big-container {
+//   margin: 0 auto;
+//   @media screen and (min-width: $min-mobile) {
+//     width: $min-mobile;
+//   }
+//   @media screen and (min-width: $min-tablet) {
+//     width: $min-tablet;
+//   }
+//   @media screen and (min-width: $min-desktop) {
+//     width: $big-container;
+//   }
+// }
 /* контейнер  */
 .container {
   margin: 0 auto;

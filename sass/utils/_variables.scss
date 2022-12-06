@@ -1,35 +1,33 @@
 :root {
-    // кольори
-    --prime-bg-color--: #ffffff;
-    /*білий*/
-    --second-bg-color--: #2f303a;
-    /*темно сірий*/
-    --title-ccolor--: #212121;
-    /*чорний*/
-    --accent-color--: #2196f3;
-    /*голубий*/
-    --text-color--: #757575;
-    /*сірий*/
-    --button-bg-color--: #f5f4fa;
-    --icon-color--: #afb1b8;
-    /*світло сірий */
- 
+  // кольори
+  --prime-bg-color--: #ffffff;
+  /*білий*/
+  --second-bg-color--: #2f303a;
+  /*темно сірий*/
+  --title-ccolor--: #212121;
+  /*чорний*/
+  --accent-color--: #2196f3;
+  /*голубий*/
+  --text-color--: #757575;
+  /*сірий*/
+  --button-bg-color--: #f5f4fa;
+  --icon-color--: #afb1b8;
+  /*світло сірий */
 
-    /* шрифти проекта  */
-        --prime-font-family--: "Roboto", sans-serif;
-        --second-font-family--: "Raleway", sans-serif;
-    
-        /* Властивості для переходів */
-            --color--: color;
-            --fill--: fill;
-            --bgcolor--: background-color;
-            --bordercolor--: border-color;
-            --filter--: filter;
-            --transform--: transform;
-            --duration--: 250ms;
-            --cubic--: cubic-bezier(0.4, 0, 0.2, 1);
+  /* шрифти проекта  */
+  --prime-font-family--: "Roboto", sans-serif;
+  --second-font-family--: "Raleway", sans-serif;
 
- }
+  /* Властивості для переходів */
+  --color--: color;
+  --fill--: fill;
+  --bgcolor--: background-color;
+  --bordercolor--: border-color;
+  --filter--: filter;
+  --transform--: transform;
+  --duration--: 250ms;
+  --cubic--: cubic-bezier(0.4, 0, 0.2, 1);
+}
 // width/padding container
 $big-container: 1600px;
 
@@ -37,8 +35,8 @@ $min-mobile: 480px;
 $min-tablet: 768px;
 $min-desktop: 1200px;
 
-$max-mobile: 767.97px;
-$max-tablet: 1199.97px;
+$max-mobile: 767.98px;
+$max-tablet: 1199.98px;
 
 $padding-container: 15px;
 

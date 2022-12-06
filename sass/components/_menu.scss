@@ -31,6 +31,7 @@
   left: 0;
   display: flex;
   flex-direction: column;
+
   width: 100vw;
   height: 100vh;
   padding: 48px 83px 48px 40px;
@@ -96,7 +97,6 @@
   display: flex;
   align-items: center;
   // gap: 20px;
-  justify-content: center;
 
   &-item {
     position: relative;

@@ -1,44 +1,43 @@
 /* список іконок  соціальних мереж в рядок*/
-.social{
+.social {
   &__list {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    
-    margin-top: 16px ;
-    padding-bottom:24px;
-    
-    @media screen and (min-width:$min-desktop) {
-    // justify-content: space-between;
-   padding-bottom: 30px;
-   }
+
+    padding-top: 16px;
+    padding-bottom: 24px;
+
+    @media screen and (min-width: $min-desktop) {
+      // justify-content: space-between;
+      padding-bottom: 30px;
+    }
   }
 
-/*кнопка на соцмережі */
-   &__button {
+  /*кнопка на соцмережі */
+  &__button {
     // display: flex;
     // justify-content: center;
     // align-items: center;
     @include centeredFlex();
     width: 44px;
     height: 44px;
-    border-radius: 50%;/*кругла*/
+    border-radius: 50%; /*кругла*/
     color: var(--icon-color--);
     transition: var(--color--) var(--duration--) var(--cubic--),
-        var(--bgcolor--) var(--duration--) var(--cubic--);
-      // на неї focus,hover
-      &:hover,
-      &:focus{
-        background-color: var(--accent-color--);
-        color: var(--prime-bg-color--);
-      }
-
+      var(--bgcolor--) var(--duration--) var(--cubic--);
+    // на неї focus,hover
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color--);
+      color: var(--prime-bg-color--);
+    }
   }
-/* колір іконка соцмереж наслідує від кнопки-батька*/
-    &__icon {
+  /* колір іконка соцмереж наслідує від кнопки-батька*/
+  &__icon {
     fill: currentColor;
-   }
+  }
 }
 /* реакція  на наведення на іконки соцмерех*/
 // .social__button:hover,

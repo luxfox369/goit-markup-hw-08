@@ -3,6 +3,7 @@
 /* hero  title-first */
 .hero {
   &-section {
+    margin: 0 auto;
     padding-top: 118px;
     padding-bottom: 118px;
     color: var(--prime-bg-color--);
@@ -50,6 +51,7 @@
     }
     //desktop
     @media screen and (min-width: $min-desktop) {
+      max-width: $big-container;
       padding-top: 200px;
       padding-bottom: 200px;
       background-image: linear-gradient(

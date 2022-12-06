@@ -184,8 +184,6 @@ a {
 
 /* глобальні налаштування */
 body {
-  width: 100vw;
-  margin: 0 auto;
   font-family: var(--prime-font-family--);
   /*'Roboto', sans-serif*/
   color: var(--text-color--);
@@ -200,25 +198,6 @@ body.modal-open {
   font-family: var(--prime-font-family--);
   border: none;
   cursor: pointer;
-}
-
-.big-container {
-  margin: 0 auto;
-}
-@media screen and (min-width: 480px) {
-  .big-container {
-    width: 480px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .big-container {
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .big-container {
-    width: 1600px;
-  }
 }
 
 /* контейнер  */
@@ -361,7 +340,7 @@ body.modal-open {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  margin-top: 16px;
+  padding-top: 16px;
   padding-bottom: 24px;
 }
 @media screen and (min-width: 1200px) {
@@ -526,9 +505,6 @@ body.modal-open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 .mobile-socials-item {
   position: relative;
@@ -615,12 +591,12 @@ body.modal-open {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (max-width: 767.97px) {
+@media screen and (max-width: 767.98px) {
   .header__container {
     position: relative;
   }
 }
-@media screen and (max-width: 767.97px) {
+@media screen and (max-width: 767.98px) {
   .header__container {
     height: 60px;
   }
@@ -694,7 +670,7 @@ body.modal-open {
 .contact__list {
   display: none;
 }
-@media screen and (min-width: 768px) and (max-width: 1199.97px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .contact__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -914,9 +890,6 @@ body.modal-open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 .mobile-socials-item {
   position: relative;
@@ -980,6 +953,7 @@ body.modal-open {
   /* анімація елемент падає зверху букви розїжджаються і все стає на місце */
 }
 .hero-section {
+  margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 118px;
   color: var(--prime-bg-color--);
@@ -1010,6 +984,7 @@ body.modal-open {
 }
 @media screen and (min-width: 1200px) {
   .hero-section {
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero_lg@1x.jpg");
@@ -1425,7 +1400,7 @@ body.modal-open {
 .team__title.title-second {
   margin-bottom: 30px;
 }
-@media screen and (max-width: 1199.97px) {
+@media screen and (max-width: 1199.98px) {
   .team__title.title-second {
     font-size: 28px;
     line-height: 1.1785714286;
@@ -1464,7 +1439,7 @@ body.modal-open {
   -webkit-transition: var(--transform--) 1s var(--cubic--);
   transition: var(--transform--) 1s var(--cubic--);
 }
-@media screen and (max-width: 767.97px) {
+@media screen and (max-width: 767.98px) {
   .team-card__item {
     width: 100%;
     margin-bottom: 30px;
@@ -1535,7 +1510,7 @@ body.modal-open {
 .client__title {
   margin-bottom: 30px;
 }
-@media screen and (max-width: 1199.97px) {
+@media screen and (max-width: 1199.98px) {
   .client__title {
     font-size: 28px;
     line-height: 1.1785714286;
@@ -1566,7 +1541,7 @@ body.modal-open {
         flex-wrap: nowrap;
   }
 }
-@media screen and (max-width: 767.97px) {
+@media screen and (max-width: 767.98px) {
   .client__item {
     -ms-flex-preferred-size: calc((100% - 30px) / 2);
         flex-basis: calc((100% - 30px) / 2);
@@ -1588,8 +1563,8 @@ body.modal-open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   color: var(--icon-color--);
   border: 1px solid var(--icon-color--);
   border-radius: 4px;
@@ -1612,7 +1587,7 @@ body.modal-open {
 }
 
 /* СЕКЦІЯ footer*/
-@media screen and (min-width: 768px) and (max-width: 1199.97px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .footer__mini {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1646,25 +1621,15 @@ body.modal-open {
   padding-bottom: 60px;
   /* border-top: 0px solid transparent; */
 }
-@media screen and (min-width: 1200px) {
-  .footer-section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-  }
-}
 
 @media screen and (min-width: 1200px) {
   .footer-combine {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
@@ -1675,7 +1640,7 @@ body.modal-open {
   display: block;
   margin-bottom: 20px;
 }
-@media screen and (max-width: 1199.97px) {
+@media screen and (max-width: 1199.98px) {
   .logo--mb20 {
     text-align: center;
     font-size: 24px;
@@ -1702,13 +1667,13 @@ body.modal-open {
 .address__list {
   width: 231px;
 }
-@media screen and (max-width: 767.97px) {
+@media screen and (max-width: 767.98px) {
   .address__list {
     margin: 0 auto;
     margin-bottom: 60px;
   }
 }
-@media screen and (max-width: 1199.97px) {
+@media screen and (max-width: 1199.98px) {
   .address__item {
     text-align: center;
   }
@@ -1753,19 +1718,17 @@ body.modal-open {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (max-width: 767.98px) {
+  .footer__social {
+    margin-bottom: 36px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer__social {
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
     margin-right: 93px;
-  }
-}
-@media screen and (max-width: 767.97px) {
-  .footer__social {
-    margin-bottom: 36px;
   }
 }
 
@@ -1824,6 +1787,10 @@ body.modal-open {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 12px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1850,6 +1817,7 @@ body.modal-open {
 .submit__input {
   display: block;
   width: 100%;
+  margin-bottom: 20px;
   background-color: var(--second-bg-color--);
   color: var(--prime-bg-color--);
   font-weight: 400;
@@ -1859,11 +1827,16 @@ body.modal-open {
   padding-left: 16px;
   padding-top: 14px;
   padding-bottom: 14px;
-  margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+@media screen and (min-width: 1200px) {
+  .submit__input {
+    margin-bottom: 0px;
+    width: 358px;
+  }
 }
 .submit__input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -1881,13 +1854,13 @@ body.modal-open {
   color: rgba(255, 255, 255, 0.6);
 }
 .submit__btn {
+  width: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
@@ -1932,7 +1905,7 @@ body.modal-open {
   gap: 8px;
   margin-bottom: 40px;
 }
-@media screen and (max-width: 767.97px) {
+@media screen and (max-width: 767.98px) {
   .filter__list {
     max-width: 326px;
   }
@@ -2006,7 +1979,7 @@ body.modal-open {
   -webkit-transition: var(--filter--) var(--duration--) var(--cubic--);
   transition: var(--filter--) var(--duration--) var(--cubic--);
 }
-@media screen and (max-width: 767.97px) {
+@media screen and (max-width: 767.98px) {
   .project__item {
     margin-bottom: 30px;
   }
