@@ -36,7 +36,7 @@
   &__input {
     display: block;
     width: 100%;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     background-color: var(--second-bg-color--);
     color: var(--prime-bg-color--);
     font-weight: 400;
@@ -79,13 +79,12 @@
     }
 
     &--icon-send {
+      gap: 10px;
       align-self: center;
 
       @media screen and (min-width: $min-desktop) {
         align-self: flex-end;
       }
-
-      gap: 10px;
     }
   }
 }

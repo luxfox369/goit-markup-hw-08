@@ -1,45 +1,47 @@
 .footer__address {
-   
-   @media screen and (min-width:$min-desktop){
+  margin-bottom: 60px;
+  @media screen and (min-width: $min-tablet) {
+    margin-bottom: 0px;
+  }
+  @media screen and (min-width: $min-desktop) {
     margin-right: 70px;
-     }
-}    
-.address{
-   &__list {
+  }
+}
+.address {
+  &__list {
     width: 231px;
-    @media screen and (max-width:$max-mobile){
-      margin:0 auto;
-      margin-bottom:60px;
+    @media screen and (max-width: $max-mobile) {
+      margin: 0 auto;
     }
-   }
-   &__item{
-   @media screen and (max-width:$max-tablet) {
-    text-align:center;
-   }  
-   }
+  }
+  &__item {
+    @media screen and (max-width: $max-tablet) {
+      text-align: center;
+    }
+  }
 
-   &__item:not(:last-child) {
+  &__item:not(:last-child) {
     margin-bottom: 9px;
-   }
+  }
 
-   &__link {
+  &__link {
     color: rgba(255, 255, 255, 0.6);
     font-style: normal;
     font-size: 14px;
     line-height: calc(21 / 14);
     letter-spacing: 0.03em;
     transition: var(--color--) var(--duration--) var(--cubic--);
-   }
+  }
 }
-.address__link{
-   &--white {
+.address__link {
+  &--white {
     color: var(--prime-bg-color--);
     transition: var(--color--) var(--duration--) var(--cubic--);
-   }
+  }
 
-/* реакція на наведення мишки або клавіатури на любий лінк футера */
-   &:hover,
-   &:focus {
+  /* реакція на наведення мишки або клавіатури на любий лінк футера */
+  &:hover,
+  &:focus {
     color: var(--accent-color--);
-   }
+  }
 }

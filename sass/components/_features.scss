@@ -7,61 +7,60 @@
 /* p в li */
 
 .feature__list {
+  @media screen and (min-width: $min-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  @media screen and (min-width: $min-desktop) {
+    flex-wrap: nowrap;
+  }
+  & .title-third {
+    text-align: center;
+    margin-bottom: 10px;
 
-    @media screen and (min-width:$min-tablet) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap:30px;
-     }
-    @media screen and  (min-width:$min-desktop) {
-       flex-wrap: nowrap;
-      }
-    & .title-third {
-            text-align: center;
-            margin-bottom: 10px;
-    
-            @media screen and (min-width:$min-tablet) {
-                text-align: left;
-            }
+    @media screen and (min-width: $min-tablet) {
+      text-align: left;
     }
+  }
 }
 .feature__item {
-       width: 100%;
-       margin-bottom:30px;
-    
-    @media screen and (min-width:$min-tablet) {
-         flex-basis:calc((100% - 2*$padding-container )/ 2);
-        //  &:nth-child(2n+1) {
-        //   margin-right: 2*$padding-container;
-        //  }
-     }     
-      @media screen and (min-width:$min-desktop) {
-         flex-basis:calc((100% - 2*$padding-container*3) / 4);
-        //  &:not(:last-child) {
-        //   margin-right: 2*$padding-container;
-        //   }
-    }
+  width: 100%;
+
+  @media screen and (min-width: $min-tablet) {
+    flex-basis: calc((100% - 2 * $padding-container) / 2);
+    //  &:nth-child(2n+1) {
+    //   margin-right: 2*$padding-container;
+    //  }
+  }
+  @media screen and (min-width: $min-desktop) {
+    flex-basis: calc((100% - 2 * $padding-container * 3) / 4);
+    //  &:not(:last-child) {
+    //   margin-right: 2*$padding-container;
+    //   }
+  }
+}
+.feature__item:not(:last-child) {
+  @media screen and (max-width: $max-mobile) {
+    margin-bottom: 30px;
+  }
 }
 .feature__icon {
-    display: block;
+  display: block;
 
-    &--block {
-        display: flex;
-        justify-content: center;
-        background: var(--button-bg-color--);
-        border-radius: 4px;
-        margin-bottom: 30px;
-        padding: 15px 0px;
-    }
+  &--block {
+    display: flex;
+    justify-content: center;
+    background: var(--button-bg-color--);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    padding: 15px 0px;
+  }
 }
 .feature__text {
-    font-size: 14px;
-    line-height: calc(24 / 14);
-    letter-spacing: 0.03em;
-    color: var(--text-color--);
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--text-color--);
 }
-
-
-
-

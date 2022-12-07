@@ -1,7 +1,4 @@
 .footer__social {
-  @media screen and (max-width: $max-mobile) {
-    margin-bottom: 36px;
-  }
   display: flex;
   flex-direction: column;
   gap: 20px;

@@ -22,21 +22,17 @@
 
   &__field {
     position: relative;
-    // margin-left: 40px;
-    // margin-right: 40px;
   }
   /*.form__input*/
   &__input {
+    display: block;
+    width: 80vw;
     @media screen and (min-width: $min-mobile) {
       width: 370px;
     }
     @media screen and (min-width: $min-desktop) {
       width: 448px;
     }
-    // position:relative;
-    // display:block;
-    // margin-left:40px;
-    // margin-right:40px;
     font-size: 16px;
     outline: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -116,9 +112,15 @@
     &--checkbox {
       position: relative;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
+      justify-content: center;
       gap: 8px;
-      margin: 17px 40px 30px 40px;
+      margin-bottom: 30px;
+      @media screen and (min-width: $min-mobile) {
+        flex-wrap: nowrap;
+        margin: 17px 40px 30px 40px;
+      }
       color: var(--text-color--);
       font-size: 12px;
       line-height: calc(14 / 12);
@@ -135,4 +137,5 @@
 .submit__btn--center {
   display: block;
   margin: 0 auto;
+  margin-bottom: 40px;
 }

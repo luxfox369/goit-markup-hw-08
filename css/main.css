@@ -300,8 +300,7 @@ body.modal-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .logo--transform {
@@ -340,7 +339,7 @@ body.modal-open {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  padding-top: 16px;
+  margin-top: 16px;
   padding-bottom: 24px;
 }
 @media screen and (min-width: 1200px) {
@@ -726,9 +725,15 @@ body.modal-open {
 /* колір  від  link-батька */
 .contact__icon {
   display: block;
+  margin-right: 8px;
   fill: currentColor;
   -webkit-transition: var(--fill--) var(--duration--) var(--cubic--), var(--color--) var(--duration--) var(--cubic--);
   transition: var(--fill--) var(--duration--) var(--cubic--), var(--color--) var(--duration--) var(--cubic--);
+}
+@media screen and (min-width: 768px) {
+  .contact__icon {
+    margin-right: 10px;
+  }
 }
 .contact__icon .contact__link:focus, .contact__link:hover .contact__icon {
   fill: var(--accent-color--);
@@ -1050,7 +1055,6 @@ body.modal-open {
 
 .modal {
   width: 450px;
-  height: 609px;
   position: absolute;
   right: 50%;
   top: 50%;
@@ -1066,7 +1070,6 @@ body.modal-open {
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
-    height: 581px;
   }
 }
 
@@ -1080,6 +1083,12 @@ body.modal-open {
   color: var(--icon-color--);
   display: block;
   padding: 0;
+}
+@media screen and (max-width: 479px) {
+  .button-close {
+    top: 8px;
+    right: 48px;
+  }
 }
 .button-close:focus, .button-close:hover .icon-close {
   stroke: var(--accent-color--);
@@ -1125,6 +1134,8 @@ body.modal-open {
   position: relative;
 }
 .form__input {
+  display: block;
+  width: 80vw;
   font-size: 16px;
   outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -1240,15 +1251,27 @@ body.modal-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 8px;
-  margin: 17px 40px 30px 40px;
+  margin-bottom: 30px;
   color: var(--text-color--);
   font-size: 12px;
   line-height: 1.1666666667;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 480px) {
+  .form__label--checkbox {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin: 17px 40px 30px 40px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .form__label--checkbox {
@@ -1262,6 +1285,7 @@ body.modal-open {
 .submit__btn--center {
   display: block;
   margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 /* секція Особливості */
@@ -1302,7 +1326,6 @@ body.modal-open {
 
 .feature__item {
   width: 100%;
-  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .feature__item {
@@ -1314,6 +1337,12 @@ body.modal-open {
   .feature__item {
     -ms-flex-preferred-size: calc((100% - 90px) / 4);
         flex-basis: calc((100% - 90px) / 4);
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .feature__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -1504,9 +1533,6 @@ body.modal-open {
 }
 
 /* секція Постійні клієнти */
-.client-section {
-  padding-top: 94px;
-}
 .client__title {
   margin-bottom: 30px;
 }
@@ -1587,6 +1613,9 @@ body.modal-open {
 }
 
 /* СЕКЦІЯ footer*/
+.footer__mini {
+  margin-bottom: 36px;
+}
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .footer__mini {
     display: -webkit-box;
@@ -1611,6 +1640,7 @@ body.modal-open {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-bottom: 0px;
   }
 }
 
@@ -1658,6 +1688,14 @@ body.modal-open {
   margin-right: 0px;
 }
 
+.footer__address {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer__address {
+    margin-bottom: 0px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer__address {
     margin-right: 70px;
@@ -1670,7 +1708,6 @@ body.modal-open {
 @media screen and (max-width: 767.98px) {
   .address__list {
     margin: 0 auto;
-    margin-bottom: 60px;
   }
 }
 @media screen and (max-width: 1199.98px) {
@@ -1717,11 +1754,6 @@ body.modal-open {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-@media screen and (max-width: 767.98px) {
-  .footer__social {
-    margin-bottom: 36px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .footer__social {
@@ -1817,7 +1849,6 @@ body.modal-open {
 .submit__input {
   display: block;
   width: 100%;
-  margin-bottom: 20px;
   background-color: var(--second-bg-color--);
   color: var(--prime-bg-color--);
   font-weight: 400;
@@ -1878,9 +1909,9 @@ body.modal-open {
   background-color: #188ce8;
 }
 .submit__btn--icon-send {
+  gap: 10px;
   -ms-flex-item-align: center;
       align-self: center;
-  gap: 10px;
 }
 @media screen and (min-width: 1200px) {
   .submit__btn--icon-send {

@@ -1,5 +1,7 @@
 /* СЕКЦІЯ footer*/
 .footer__mini {
+  margin-bottom: 36px;
+
   @media screen and (min-width: $min-tablet) and (max-width: $max-tablet) {
     display: flex;
     justify-content: space-around;
@@ -10,13 +12,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0px;
   }
 }
 .footer-section {
-  // @media screen and (min-width: $min-desktop) {
-  //   display: flex;
-  //   align-items: baseline;
-  // }
   color: var(--prime-bg-color--);
   background: var(--second-bg-color--);
   padding-top: 60px;

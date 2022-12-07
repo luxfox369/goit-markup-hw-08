@@ -36,6 +36,10 @@
 /* колір  від  link-батька */
 .contact__icon {
   display: block;
+  margin-right: 8px;
+  @media screen and(min-width:$min-tablet) {
+    margin-right: 10px;
+  }
   fill: currentColor;
   transition: var(--fill--) var(--duration--) var(--cubic--),
     var(--color--) var(--duration--) var(--cubic--);
